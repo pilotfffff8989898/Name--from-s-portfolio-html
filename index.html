@@ -1,236 +1,788 @@
 <!DOCTYPE html>
-<!-- saved from url=(0103)https://claude.ai/design/p/f7718e9c-6fbf-4844-a44c-161429f1b002?via=share&file=FROM.S+Portfolio.dc.html -->
-<html lang="en" data-theme="light"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FROM.S 포트폴리오 리뉴얼</title>
-    <link rel="icon" type="image/png" href="https://claude.ai/design/favicon.png">
-    <script>
-      // FOUC guard: set data-theme before any stylesheet loads so the first
-      // paint uses the right palette. Mirrors hooks/useTheme.ts. The stored
-      // value is JSON (usehooks-ts useLocalStorage). When no preference is
-      // stored we paint light — the dark-mode flag isn't known until React
-      // mounts, and a flag-off user with OS dark mode shouldn't see a dark
-      // flash. useTheme's effect corrects this on mount for flag-on users.
-      try {
-        var raw = localStorage.getItem('om:theme');
-        // Mirror useTheme's default: usehooks-ts doesn't persist 'system'
-        // until the toggle is used, so absent = 'system' (gated on flagOn).
-        var pref = raw ? JSON.parse(raw) : 'system';
-        // The flag isn't known at first paint. The hook persists its last
-        // known state here so a user whose flag was turned off after picking
-        // Dark doesn't see a dark→light flash on every load.
-        var flagOn = localStorage.getItem('om:dark-mode-enabled') === '1';
-        var dark =
-          flagOn &&
-          (pref === 'dark' ||
-            (pref === 'system' &&
-              matchMedia('(prefers-color-scheme: dark)').matches));
-        document.documentElement.dataset.theme = dark ? 'dark' : 'light';
-      } catch (e) {
-        document.documentElement.dataset.theme = 'light';
-      }
-    </script>
-    <script type="module" crossorigin="" src="./FROM.S 포트폴리오 리뉴얼_files/index-BW8VgV7n.js.다운로드"></script>
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/rolldown-runtime-CMxvf4Kt.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/preload-helper-7XptfjGJ.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/react-BthIFXYf.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/client-lite-BMZ6SQcV.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/connect-lite-vzd2EiZc.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/useOrg-B4hduHFg.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/cn-BvRk9kiK.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/cn-qYiRd2Uw.js">
-    <link rel="modulepreload" crossorigin="" href="https://claude.ai/design/assets/v1/jsx-runtime-DDrWIXeu.js">
-    <link rel="stylesheet" crossorigin="" href="./FROM.S 포트폴리오 리뉴얼_files/index-BXI75ZL7.css">
-  <link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/AttachmentChips-CTzReW4S.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/Button-BqQ0-BlR.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/Dialog-DOPVjJ8q.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/LimitUpsellOptionCard-BxgOfeu8.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/ProjectPage-CofZr4St.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/SpinnerCursorContext-FnwGR7gg.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/browser-BV-Pd9QF.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/client-CK3tcJpU.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/client-event-bus-CUOhmLFi.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/connectrpc-CwgkavsV.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/esm-KwGlYLgR.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/format-DyW9sFWC.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/glyph-BHo4ckbs.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/home-analytics-XbIIDG9x.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/host-BwlQdwMG.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/html-ref-check-B3hggCTL.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/path-B8831-h-.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/platform-DadmC9Zo.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/presenterChannel-CJwPOshM.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/shared-BtICgni1.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/spark-CNmD5DEi.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/timestamp-DII3bqZr.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/useEditInteraction-o2RRtjJL.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/useModelSelection-awGMqYos.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/useMutation-CsCMIALw.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/useQuery-BRvfNCD2.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/useUserSettings-DXWtStv9.js"><link rel="modulepreload" crossorigin="" fetchpriority="low" href="https://claude.ai/design/assets/v1/viewer-handle-D2f32J5R.js"><link rel="preload" as="style" crossorigin="" fetchpriority="low" href="./FROM.S 포트폴리오 리뉴얼_files/Button-C3hHoRdu.css"><link rel="preload" as="style" crossorigin="" fetchpriority="low" href="./FROM.S 포트폴리오 리뉴얼_files/ProjectPage-BnhONUSu.css"><link rel="preload" as="style" crossorigin="" fetchpriority="low" href="./FROM.S 포트폴리오 리뉴얼_files/format-D66gdL5p.css"><link rel="preload" as="style" crossorigin="" fetchpriority="low" href="./FROM.S 포트폴리오 리뉴얼_files/home-analytics-DVN_Gu5T.css"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/DesignSpotlight-DyIRe-jC.js"><link rel="stylesheet" crossorigin="" href="./FROM.S 포트폴리오 리뉴얼_files/Button-C3hHoRdu.css"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/Switch-CyCO_0gV.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/useLabelableId-B-iAZrS2.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/hooks-BvX713vQ.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/AnimatePresence-CdFTYeUp.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/schemas-DgQq6Z5S.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/DesignChatTooltip-vZh4-ZLR.js"><link rel="stylesheet" crossorigin="" href="./FROM.S 포트폴리오 리뉴얼_files/home-analytics-DVN_Gu5T.css"><link rel="stylesheet" crossorigin="" href="./FROM.S 포트폴리오 리뉴얼_files/format-D66gdL5p.css"><link rel="stylesheet" crossorigin="" href="./FROM.S 포트폴리오 리뉴얼_files/ProjectPage-BnhONUSu.css"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/gb-setters-C4qfjwQM.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/datadog-rum-B5WH0SNY.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/OnboardingModal-Dll1Cqw0.js"><link rel="modulepreload" as="script" crossorigin="" href="./FROM.S 포트폴리오 리뉴얼_files/index-BW8VgV7n.js.다운로드"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/data-BY8gZZ9S.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/UserSettingsPanel-HiG6sY6g.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/useReferral-DTkEJPoR.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/ConnectorsPanel-C-OcxeH4.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/DsBrowseModal-BNB2nfhh.js"><link rel="modulepreload" as="script" crossorigin="" href="https://claude.ai/design/assets/v1/HandoffModal-YsYw1cpb.js"><meta name="omelette-user-email" content="pilotfish89@gmail.com"></head>
-  <body>
-    <script type="application/json" id="omelette-me">{"accountUuid":"78a29691-9d14-49d4-9699-092a114b8061","organizationUuid":"2a030f89-3542-4af6-b625-34c98f81a1cc","email":"pilotfish89@gmail.com","displayName":"슬비","orgName":"pilotfish89@gmail.com's Organization","growthbookPayload":"{\"features\":{\"1151484512\":{\"defaultValue\":false},\"1165366735\":{\"defaultValue\":false},\"1196304285\":{\"defaultValue\":false},\"1227884110\":{\"defaultValue\":\"promptbox\",\"rules\":[{\"force\":\"promptbox\",\"tracks\":[{\"experiment\":{\"hashAttribute\":\"id\",\"key\":\"promptbox-vs-make\",\"variations\":[\"make\",\"promptbox\"]},\"result\":{\"featureId\":\"1227884110\",\"hashAttribute\":\"id\",\"hashUsed\":true,\"hashValue\":\"78a29691-9d14-49d4-9699-092a114b8061\",\"inExperiment\":true,\"key\":\"1\",\"value\":\"promptbox\",\"variationId\":1}}]}]},\"1416961418\":{\"defaultValue\":false},\"1439489127\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqqtdxj2\"}]},\"1512845023\":{\"defaultValue\":{}},\"1515141647\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqgslqr3\"}]},\"1561180886\":{\"defaultValue\":false},\"1640367735\":{\"defaultValue\":\"full\"},\"1649941334\":{\"defaultValue\":false},\"167478287\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqaouksv\"}]},\"1819818117\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fbe61835-fcc4-4d16-9da4-78a591bd03dd\"}]},\"1823167981\":{\"defaultValue\":false},\"182608835\":{\"defaultValue\":{\"models\":[\"claude-opus-4-8\"]},\"rules\":[{\"force\":{\"models\":[\"claude-opus-4-8\"]},\"id\":\"fr_mqgrq45w\"}]},\"1886700156\":{\"defaultValue\":false},\"190587821\":{\"defaultValue\":true},\"1964418062\":{\"defaultValue\":false},\"1992383354\":{\"defaultValue\":{}},\"1995367228\":{\"defaultValue\":false},\"2047721102\":{\"defaultValue\":true},\"2058095250\":{\"defaultValue\":true},\"2108531094\":{\"defaultValue\":true},\"2149436205\":{\"defaultValue\":true},\"2151263030\":{\"defaultValue\":false},\"2230761618\":{\"defaultValue\":false},\"2245129288\":{\"defaultValue\":\"Claude Code\"},\"2295492666\":{\"defaultValue\":false},\"2319326955\":{\"defaultValue\":{\"minProjectCount\":1,\"placements\":{\"chin\":false,\"postExport\":false,\"postShare\":false,\"settings\":false}}},\"2334228495\":{\"defaultValue\":\"https://docs.google.com/forms/d/e/1FAIpQLSfKN7e_F4B8erZWBl3gjnVsNE1RRo5eiN_KhmXyiefUEZ71rQ/viewform\",\"rules\":[{\"force\":\"https://docs.google.com/forms/d/e/1FAIpQLSfKN7e_F4B8erZWBl3gjnVsNE1RRo5eiN_KhmXyiefUEZ71rQ/viewform\",\"id\":\"fr_mnwalz96\"}]},\"2352858198\":{\"defaultValue\":false},\"2365775426\":{\"defaultValue\":false},\"2384113377\":{\"defaultValue\":false},\"2412179225\":{\"defaultValue\":\"on_without_toggle\"},\"2420051580\":{\"defaultValue\":false},\"2469959517\":{\"defaultValue\":\"no_create\"},\"2698841507\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"5zN5zjtnBsBlbqzIZAb6Zc:100.00:2\"}]},\"2880160395\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqihdr3o\"}]},\"289426011\":{\"defaultValue\":\"progress\"},\"2898290939\":{\"defaultValue\":false},\"292332472\":{\"defaultValue\":false},\"2932278662\":{\"defaultValue\":{}},\"2936519687\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mq9zz7mt\"}]},\"299168588\":{\"defaultValue\":false},\"3032265515\":{\"defaultValue\":true},\"3039982112\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mpyqyhqs\"}]},\"3049740115\":{\"defaultValue\":false},\"3070778810\":{\"defaultValue\":{\"admin-capability-tooltip\":{\"enabled\":true,\"paths\":[\"/admin-settings/capabilities\"]},\"chat-tooltip\":{\"enabled\":true,\"paths\":[\"/new\"]},\"clint-interview\":{\"enabled\":true,\"paths\":[\"/new\",\"/task/new\"]},\"console-spotlight\":{\"enabled\":true,\"paths\":[\"/*\"]},\"corner-nudge\":{\"enabled\":true,\"paths\":[\"/*\"]},\"cowork\":{\"enabled\":true,\"paths\":[\"/task/new\"]},\"dashboard-banner\":{\"enabled\":true,\"paths\":[\"/dashboard\"]},\"dashboard-promo-banner\":{\"enabled\":true,\"paths\":[\"/dashboard\"]},\"design-chat-tooltip\":{\"enabled\":true,\"paths\":[\"/p/*\"]},\"design-guest-pass-home\":{\"enabled\":true,\"paths\":[\"/\"]},\"design-spotlight\":{\"enabled\":true,\"paths\":[\"/*\"]},\"global-banner\":{\"enabled\":true,\"paths\":[\"/new\",\"/chat/*\"]},\"home-banner\":{\"enabled\":true,\"paths\":[\"/new\"]},\"home-nudge\":{\"enabled\":true,\"paths\":[\"/new\"]},\"sidebar-callout\":{\"enabled\":true,\"paths\":[\"/*\"]},\"sidebar-product-badge\":{\"enabled\":true,\"paths\":[\"/*\"]},\"spotlight\":{\"enabled\":true,\"paths\":[\"/new\",\"/task/new\",\"/code\",\"/epitaxy\"]}}},\"3070976585\":{\"defaultValue\":false},\"3123903501\":{\"defaultValue\":false},\"3129625600\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_movvp3c4\"}]},\"3136180827\":{\"defaultValue\":\"builtin\"},\"323017277\":{\"defaultValue\":false},\"3259014779\":{\"defaultValue\":\"high\",\"rules\":[{\"force\":\"high\",\"tracks\":[{\"experiment\":{\"hashAttribute\":\"id\",\"key\":\"omelette_adaptive_effort\",\"variations\":[\"high\",\"medium\"]},\"result\":{\"featureId\":\"3259014779\",\"hashAttribute\":\"id\",\"hashUsed\":true,\"hashValue\":\"78a29691-9d14-49d4-9699-092a114b8061\",\"inExperiment\":true,\"key\":\"0\",\"value\":\"high\",\"variationId\":0}}]}]},\"3275324994\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqgs4fnv\"}]},\"3290303989\":{\"defaultValue\":\"Claude Design\"},\"3298974905\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mppytj3e\"}]},\"3387678531\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqfyn30u\"}]},\"3423339596\":{\"defaultValue\":false,\"rules\":[{\"force\":false,\"id\":\"fr_3smt4nmngjlnbj\"}]},\"3489167219\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mprhvxaa\"}]},\"3669825161\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mq5ocxpr\"}]},\"3696293621\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mprjbkkc\"}]},\"375802038\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqtkj38a\"}]},\"3803514950\":{\"defaultValue\":false},\"3813248442\":{\"defaultValue\":false},\"3846130249\":{\"defaultValue\":true},\"3855458502\":{\"defaultValue\":false},\"3885738648\":{\"defaultValue\":false},\"3925648405\":{\"defaultValue\":false},\"3956844404\":{\"defaultValue\":false},\"4043533131\":{\"defaultValue\":false},\"4057535730\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mpgl2fqw\"}]},\"4068229310\":{\"defaultValue\":\"OFF\"},\"4158685222\":{\"defaultValue\":false},\"4163819615\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mpgdr086\"}]},\"4227212264\":{\"defaultValue\":false},\"4260211907\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mphflkpe\"}]},\"4292285061\":{\"defaultValue\":false},\"505682162\":{\"defaultValue\":false},\"520603182\":{\"defaultValue\":\"takeover_chips\",\"rules\":[{\"force\":\"takeover_chips\",\"id\":\"fr_fspnmqfiwl2u\"}]},\"615499191\":{\"defaultValue\":false},\"617433922\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqfckmfe\"}]},\"657312184\":{\"defaultValue\":false},\"664173016\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_1h4b0onmnaw2adf\"}]},\"66949239\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mo649sv4\"}]},\"683719888\":{\"defaultValue\":true,\"rules\":[{\"force\":true,\"id\":\"fr_mqifkas7\"}]},\"693066665\":{\"defaultValue\":false},\"715846303\":{\"defaultValue\":false},\"728811919\":{\"defaultValue\":false},\"737652865\":{\"defaultValue\":false},\"904857048\":{\"defaultValue\":true},\"983120038\":{\"defaultValue\":false}},\"hashing_algorithm\":\"djb2\"}","modelPresets":[{"id":"claude-fable-5","label":"Claude Fable 5","maxTokens":1000000,"supportsAdaptiveThinking":true,"description":"For your toughest challenges","effortOptions":[{"id":"low","name":"Low"},{"id":"medium","name":"Medium"},{"id":"high","name":"High","recommended":true},{"id":"max","name":"Max"}]},{"id":"claude-opus-4-8","label":"Claude Opus 4.8","maxTokens":1000000,"supportsAdaptiveThinking":true,"description":"For complex tasks","effortOptions":[{"id":"low","name":"Low"},{"id":"medium","name":"Medium"},{"id":"high","name":"High","recommended":true},{"id":"max","name":"Max"}]},{"id":"claude-sonnet-4-6","label":"Claude Sonnet 4.6","maxTokens":1000000,"supportsAdaptiveThinking":true,"description":"Most efficient for everyday tasks","effortOptions":[{"id":"low","name":"Low","recommended":true},{"id":"medium","name":"Medium"},{"id":"high","name":"High"},{"id":"max","name":"Max"}]},{"id":"claude-haiku-4-5-20251001","label":"Claude Haiku 4.5","maxTokens":200000,"description":"Fastest for quick answers"},{"id":"claude-opus-4-7","label":"Claude Opus 4.7","maxTokens":1000000,"supportsAdaptiveThinking":true,"overflow":true,"effortOptions":[{"id":"low","name":"Low"},{"id":"medium","name":"Medium"},{"id":"high","name":"High","recommended":true},{"id":"max","name":"Max"}]},{"id":"claude-opus-4-6","label":"Claude Opus 4.6","maxTokens":1000000,"supportsAdaptiveThinking":true,"overflow":true,"effortOptions":[{"id":"low","name":"Low"},{"id":"medium","name":"Medium","recommended":true},{"id":"high","name":"High"},{"id":"max","name":"Max"}]},{"id":"claude-3-opus-20240229","label":"Claude Opus 3","maxTokens":200000,"overflow":true}],"defaultModelId":"claude-opus-4-8","isPersonalOrg":true,"accessLevel":"ACCESS_LEVEL_FULL","canManageDs":true,"memberships":[{"uuid":"2a030f89-3542-4af6-b625-34c98f81a1cc","name":"pilotfish89@gmail.com's Organization"}],"canManageBilling":true,"orgScopeSharingAllowed":true}</script><div id="root"><div class="h-dvh flex flex-col"><div class="flex-1 min-h-0"><div class="h-full flex flex-col bg-transparent"><div class="flex-1 flex flex-col overflow-hidden"><div class="relative flex flex-col h-full bg-transparent"><div class="relative flex flex-col h-full bg-om-bg-app"><div class="flex-1 flex min-h-0" style="padding: 8px; gap: 8px;"><div style="position: absolute; pointer-events: none;"><div class="absolute inset-0 bg-[radial-gradient(ellipse_120%_90%_at_40%_30%,#1a1a1a_0%,#0d0d0d_50%,#000_100%)] invisible"><div class="origin-top-left" style="transform: translate(0px, 0px) scale(0.166667);"><iframe src="./FROM.S 포트폴리오 리뉴얼_files/saved_resource.html" width="924" height="540" allow="camera; microphone; geolocation" sandbox="allow-scripts allow-forms allow-popups allow-same-origin" style="border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; pointer-events: none; display: block; background: transparent; color-scheme: normal;"></iframe></div></div></div><div class="shrink-0 opacity-100 visible overflow-visible" style="width: 301px; margin-right: 0px; transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1), margin-right 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s, visibility linear;"><div class="h-full flex flex-col min-h-0" style="width: 301px; transition: width 0.28s cubic-bezier(0.4, 0, 0.2, 1);"><div class="flex items-center gap-1.5 py-2 shrink-0 [-webkit-app-region:drag] [&amp;_:is(button,a,input)]:[-webkit-app-region:no-drag]"><div class="inline-flex"><a class="rounded-[7px] inline-flex items-center justify-center self-center shrink-0 text-om-accent-primary bg-om-bg-elevated cursor-default no-underline shadow-[0_1px_2px_rgba(20,20,19,0.08),0_0_0_1px_var(--om-border-subtle)] transition-[box-shadow,transform] duration-[120ms] hover:shadow-[0_2px_5px_rgba(20,20,19,0.12),0_0_0_1px_var(--om-border-default)] hover:-translate-y-px active:translate-y-px w-[26px] h-[26px] ml-1.5" href="https://claude.ai/design/" aria-label="Back to projects"><svg width="16" height="16" viewBox="0 0 20 21" fill="none" aria-hidden="true"><path d="M9.99902 0C15.5258 0.000170936 19.999 4.50643 19.999 10.0547C19.999 11.7656 19.5863 12.9976 18.7861 13.8203C17.9924 14.6362 16.9465 14.9138 15.9854 15.0078C15.05 15.0993 14.0097 15.0262 13.2549 15.0186C12.8524 15.0145 12.5177 15.0267 12.2441 15.0703C11.9682 15.1144 11.8143 15.1813 11.7305 15.2432C11.4745 15.4322 11.3353 15.7121 11.2656 16.1602C11.2303 16.3875 11.2168 16.6362 11.209 16.9131C11.2017 17.1715 11.1986 17.4893 11.1807 17.7705C11.1469 18.2975 11.0495 19.0865 10.4199 19.5908C9.7846 20.0996 8.88652 20.1057 7.85449 19.877C7.36399 19.7682 6.88652 19.6232 6.42578 19.4453C2.66989 17.9949 0.000187748 14.3414 0 10.0547C0 4.50643 4.47223 0.000171048 9.99902 0ZM9.99902 1.60547C5.36781 1.60564 1.60547 5.38391 1.60547 10.0547C1.60566 13.6582 3.84823 16.7296 7.00391 17.9482C7.39027 18.0974 7.79085 18.2184 8.20215 18.3096C9.1375 18.5169 9.384 18.3633 9.41602 18.3379C9.4524 18.3087 9.54558 18.1915 9.5791 17.668C9.5947 17.4239 9.59473 17.1786 9.60352 16.8672C9.61179 16.5742 9.62831 16.2435 9.67969 15.9131C9.78359 15.2455 10.0474 14.4906 10.7764 13.9521C11.1479 13.6778 11.5842 13.5493 11.9912 13.4844C12.4007 13.4191 12.8434 13.4088 13.2705 13.4131C14.1753 13.4222 15.0071 13.4905 15.8291 13.4102C16.6257 13.3322 17.2249 13.1235 17.6357 12.7012C18.0401 12.2855 18.3935 11.5261 18.3936 10.0547C18.3936 5.38391 14.6302 1.60564 9.99902 1.60547ZM5.11621 9.86719C5.86386 9.91468 6.45486 10.5348 6.45508 11.2939C6.45506 12.0838 5.81519 12.7245 5.02539 12.7246C4.28481 12.7246 3.67573 12.1617 3.60254 11.4404L3.59473 11.2939L3.60156 11.1533C3.66942 10.4596 4.23282 9.91186 4.93359 9.86719H5.11621ZM14.9814 7.19141C15.729 7.23889 16.3199 7.85919 16.3203 8.61816C16.3203 9.40801 15.6804 10.0487 14.8906 10.0488C14.1501 10.0487 13.5409 9.48586 13.4678 8.76465L13.46 8.61816L13.4668 8.47754C13.5348 7.78403 14.0983 7.23618 14.7988 7.19141H14.9814ZM6.4541 4.93457C7.20161 4.9822 7.79275 5.60231 7.79297 6.36133C7.79288 7.151 7.15291 7.7917 6.36328 7.79199C5.62274 7.79199 5.01369 7.22903 4.94043 6.50781L4.93262 6.36133L4.93945 6.2207C5.00731 5.52698 5.5707 4.97922 6.27148 4.93457H6.4541ZM11.3867 3.59668C12.1343 3.64419 12.7253 4.26436 12.7256 5.02344C12.7256 5.81326 12.0857 6.45393 11.2959 6.4541C10.5553 6.4541 9.94622 5.89123 9.87305 5.16992L9.86523 5.02344L9.87207 4.88281C9.93996 4.18912 10.5033 3.64133 11.2041 3.59668H11.3867Z" fill="currentColor"></path></svg></a></div><div class="flex-1 min-w-0 flex items-center [-webkit-app-region:no-drag]"><span class="box-border text-[13px] font-[450] text-om-text-primary tracking-[-0.1px] leading-5 rounded-[4px] px-1.5 py-0.5 border border-transparent max-w-[320px] absolute invisible whitespace-pre pointer-events-none">FROM.S 포트폴리오 리뉴얼</span><span class="box-border text-[13px] font-[450] text-om-text-primary tracking-[-0.1px] leading-5 rounded-[4px] px-1.5 py-0.5 border border-transparent max-w-[320px] truncate cursor-text hover:bg-om-bg-hover" title="FROM.S 포트폴리오 리뉴얼" data-testid="project-title">FROM.S 포트폴리오 리뉴얼</span><button title="Project menu" aria-label="Project menu" class="shrink-0 w-5 h-5 flex items-center justify-center p-0 rounded-[4px] text-om-text-tertiary cursor-default outline-none hover:bg-om-bg-hover hover:text-om-text-secondary bg-transparent"><i class="ai-CaretDownSmall leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 12px; transform: translateY(1.5px);"></i></button></div><div class="inline-flex"><button class="flex cursor-default select-none items-center justify-center rounded p-0 text-om-text-tertiary no-underline outline-none bg-transparent hover:bg-om-bg-hover hover:text-om-text-secondary active:brightness-[.8] disabled:cursor-not-allowed disabled:opacity-30" aria-label="Hide sidebar" style="width: 25px; height: 25px;"><i class="ai-Sidebar leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; -webkit-text-stroke: 0.04em currentcolor;"></i></button></div><div style="display: inline-flex; align-self: center; padding-right: 6px;"><button class="flex cursor-default select-none items-center justify-center rounded p-0 text-om-text-tertiary no-underline outline-none bg-transparent hover:bg-om-bg-hover hover:text-om-text-secondary active:brightness-[.8] disabled:cursor-not-allowed disabled:opacity-30" title="Chat history" aria-label="Chat history" data-testid="nav-chat-history" style="width: 25px; height: 25px;"><i class="ai-Chats leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; -webkit-text-stroke: 0.04em currentcolor;"></i></button></div></div><div class="flex-1 min-h-0 flex flex-col"><div class="flex-1 min-h-0 flex flex-col"><div style="display: flex; flex-direction: column; flex: 1 1 0%; min-height: 0px;"><div class="flex flex-col h-full relative"><div class="flex-1 h-0 flex flex-col bg-transparent" style="--chat-floor: var(--om-bg-app); --chat-pad-l: 8px; --chat-pad-r: 0px;"><div class="flex-1 relative overflow-hidden [contain:strict] before:content-[&#39;&#39;] before:absolute before:top-0 before:left-0 before:right-0 before:h-5 before:bg-[linear-gradient(to_bottom,var(--chat-floor)_2%,transparent_100%)] before:pointer-events-none before:z-[1]"><div data-testid="chat-messages" data-chat-id="ba35e652-69f7-4484-b2f9-fe3d5ecc3376" class="om-chat-messages h-full pt-3.5 pr-[var(--chat-pad-r)] pb-[38px] pl-[var(--chat-pad-l)] overflow-auto relative"><div style="position: relative; height: 8562px;"><div data-index="4" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(2287px);"><div class="om-assistant-group"><div class="mb-3.5"><div class="select-text [overflow-wrap:break-word] break-words min-w-0"><div class="om-md-content"><div><p>FROM.S 정체성과 작업물이 명확하네요. AI 중심·쿨 뉴트럴·미니멀로, AI 프로젝트가 최상단에 오는 1페이지 스크롤 포트폴리오를 만들고, 히어로는 3가지 시안(에디토리얼/중앙 갤러리/스플릿)을 Tweaks에서 전환할 수 있게 하겠습니다.</p>
-<p>타입 시스템: Pretendard(한글·본문) + Space Grotesk(영문 디스플레이) + DM Mono(라벨·데이터). 컬러는 오프화이트 #F3F4F5 / 잉크 #16181B 모노톤, 작업물 이미지가 색을 담당.</p>
-</div></div><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-default"><i class="ai-Checklist leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Updated todos</span></div></div><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Designing</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-File leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">FROM.S Portfolio.dc.html</span><i class="ai-ArrowOutSquare leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Checklist leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Updated todos</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-180" style="font-size: 12px;"></i></div><div class="border-t-[0.5px] border-[var(--om-border-default)] py-2 px-2.5 bg-om-bg-panel"><div style="display: flex; flex-direction: column; gap: 2px;"><div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 400; padding: 4px 0px; color: var(--om-text-disabled); text-decoration: line-through;"><span style="width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; border: 1.5px solid rgb(120, 140, 93); background: rgb(120, 140, 93); display: flex; align-items: center; justify-content: center; font-size: 7px; color: white; line-height: 1;">✓</span>Build FROM.S 1-page portfolio DC (nav, hero, work, workflow, about, skills, clients, contact)</div><div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 400; padding: 4px 0px; color: var(--om-text-disabled); text-decoration: line-through;"><span style="width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; border: 1.5px solid rgb(120, 140, 93); background: rgb(120, 140, 93); display: flex; align-items: center; justify-content: center; font-size: 7px; color: white; line-height: 1;">✓</span>Add 3 hero variants behind heroVariant tweak</div><div style="display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 400; padding: 4px 0px; color: var(--om-text-disabled); text-decoration: line-through;"><span style="width: 11px; height: 11px; border-radius: 3px; flex-shrink: 0; border: 1.5px solid rgb(120, 140, 93); background: rgb(120, 140, 93); display: flex; align-items: center; justify-content: center; font-size: 7px; color: white; line-height: 1;">✓</span>Image placeholders for 6 works + verify</div></div></div></div></div><div class="om-md-content"><div><p>FROM.S 포트폴리오 MVP 완성입니다. AI 프로젝트가 최상단에 오는 1페이지 스크롤 구조로, 채용 담당자가 3초 안에 "AI를 실무 워크플로우로 다루는 크리에이티브 디자이너"라는 인상을 받도록 설계했습니다.</p>
-<p>구성: 네비 → 히어로 → Work(글램팜 피처드 + 5개 카드) → Workflow(다크 섹션, 5단계 프로세스) → About → 역량&amp;툴 → 클라이언트 → Contact.</p>
-<p>Tweaks 패널에서 조절 가능한 항목 두 가지:</p>
-<ul>
-<li><strong>heroVariant</strong> — 히어로 3시안 전환 (editorial / centered / split)</li>
-<li><strong>availableForWork</strong> — "Available for work" 배지 on/off</li>
-</ul>
-<p>이미지 자리는 줄무늬 플레이스홀더로 두었으니, 실제 작업물(글램팜 숏폼, 가히/SK/원스토어 소재)을 드래그해 채우시면 됩니다. 이메일·SNS 링크는 placeholder(<a href="mailto:hello@from-s.work">hello@from-s.work</a>)이니 실제 정보로 바꿔주세요.</p>
-<p>다음 단계로 Workflow Case·Experiments·Case Study 섹션을 같은 파일에 추가해 확장할 수 있습니다.</p>
-</div></div><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Finishing up</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div></div><div class="om-md-content"><div><p>깨끗하게 로드됐습니다. 위 요약대로 확인해 보시고, 작업물 이미지·연락처만 채우시면 제출 가능한 MVP입니다.</p>
-</div></div></div></div><div data-msgfb="true" class="mt-0.5 flex flex-wrap items-center gap-0.5 transition-opacity duration-[120ms] pointer-events-auto opacity-100 focus-within:pointer-events-auto focus-within:opacity-100 om-no-hover:pointer-events-auto om-no-hover:opacity-100 om-coarse:pointer-events-auto om-coarse:opacity-100 [&amp;_button:focus-visible]:outline-2 [&amp;_button:focus-visible]:outline-om-accent-primary [&amp;_button:focus-visible]:-outline-offset-2"><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Good response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsUp leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Bad response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><span title="Created FROM.S Portfolio.dc.html" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[11px] font-medium text-om-text-tertiary [&amp;:not(:first-child)]:ml-2 no-underline">Created FROM.S Portfolio.dc.html</span><span aria-live="polite" class="[&amp;:not(:empty)]:w-full [&amp;&gt;a]:ml-0"></span></div></div></div><div data-index="5" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(3388px);"><div style="display: inline-flex; align-items: center; justify-content: center; min-height: 24px; text-align: center; width: 100%; align-self: stretch; gap: 6px; padding: 4px 10px; border-radius: 8px; border: 1px solid var(--om-border-subtle); font-size: 11px; font-weight: 500; color: var(--om-text-tertiary); margin-top: 2px; margin-bottom: 16px;">Found issues — fixing…</div></div><div data-index="6" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(3431px);"><div class="om-assistant-group"><div class="mb-3.5"><div class="select-text [overflow-wrap:break-word] break-words min-w-0"><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Refining design ×3</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div></div><div class="om-md-content"><div><p>Fixed — removed the entrance animations so the hero text renders at full opacity.</p>
-</div></div><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Finishing up</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div></div><div class="om-md-content"><div><p>히어로 텍스트가 정상 표시됩니다. 이제 모든 섹션이 깨끗하게 렌더링되니 제출용 MVP로 사용하실 수 있습니다.</p>
-</div></div></div></div><div data-msgfb="true" class="mt-0.5 flex flex-wrap items-center gap-0.5 transition-opacity duration-[120ms] pointer-events-auto opacity-100 focus-within:pointer-events-auto focus-within:opacity-100 om-no-hover:pointer-events-auto om-no-hover:opacity-100 om-coarse:pointer-events-auto om-coarse:opacity-100 [&amp;_button:focus-visible]:outline-2 [&amp;_button:focus-visible]:outline-om-accent-primary [&amp;_button:focus-visible]:-outline-offset-2"><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Good response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsUp leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Bad response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><span title="Edited FROM.S Portfolio.dc.html" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[11px] font-medium text-om-text-tertiary [&amp;:not(:first-child)]:ml-2 no-underline">Edited FROM.S Portfolio.dc.html</span><span aria-live="polite" class="[&amp;:not(:empty)]:w-full [&amp;&gt;a]:ml-0"></span></div></div></div><div data-index="7" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(3662px);"><div class="mb-3.5 flex flex-col items-end"><div class="select-text [overflow-wrap:break-word] break-words min-w-0 py-2 px-3 max-w-[85%] w-fit text-left" style="background: var(--om-bg-surface); border: 0.5px solid var(--om-border-default); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px;"><span style="font-size: 13px; color: var(--om-text-primary); line-height: 1.6; white-space: pre-wrap;">Save as standalone HTML: FROM.S Portfolio.dc.html</span><div class="flex flex-wrap items-start gap-1.5 mt-2"><div class="group inline-flex items-center font-medium border rounded-lg shadow-[0_1px_2px_rgba(0,0,0,0.04)] min-w-0 shrink gap-1 py-0.5 px-1.5 text-[10px] bg-om-bg-panel border-om-border-default text-om-text-secondary" title="Export the current design as a single self-contained HTML file that works completely offline — no external dependencies.
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FROM.S — Commercial Creative Designer · AI Creative Systems</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+  :root{ --accent:#4F8BFF; --accent-soft:rgba(79,139,255,0.14); --accent-bloom:rgba(79,139,255,0.16); --accent-line:rgba(79,139,255,0.55); --accent-glow:rgba(79,139,255,0.34); }
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; padding:0; }
+  body{ font-family:'Pretendard','Pretendard Variable',system-ui,-apple-system,sans-serif; -webkit-font-smoothing:antialiased; }
+  ::selection{ background:#F3F4F5; color:#0E0F11; }
+  a{ color:inherit; }
+  img{ max-width:100%; }
+  header nav a:hover{ color:var(--accent); }
+  #hero .marq:hover{ animation-play-state:paused; }
+  @keyframes marquee{ 0%{ transform:translateX(0);} 100%{ transform:translateX(-50%);} }
+  @keyframes blink{ 0%,55%{ opacity:1;} 56%,100%{ opacity:0.25;} }
+  @keyframes sheen{ 0%{ transform:translateX(-160%) skewX(-18deg);} 100%{ transform:translateX(360%) skewX(-18deg);} }
+  @keyframes pulsedot{ 0%,100%{ box-shadow:0 0 0 0 rgba(243,244,245,0.35);} 50%{ box-shadow:0 0 0 5px rgba(243,244,245,0);} }
+  @keyframes fadein{ from{ opacity:0;} to{ opacity:1;} }
+  @keyframes loadbar{ 0%{ transform:translateX(-110%);} 100%{ transform:translateX(360%);} }
+</style>
+</head>
+<body>
+<div id="top" style="background:#F3F4F5; color:#16181B; overflow-x:hidden;">
 
-## How it works
+  <!-- ============ NAV ============ -->
+  <header style="position:sticky; top:0; z-index:50; background:rgba(14,15,17,0.86); backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid rgba(243,244,245,0.10);">
+    <div style="max-width:1240px; margin:0 auto; padding:0 32px; height:64px; display:flex; align-items:center; justify-content:space-between; gap:24px; color:#F3F4F5;">
+      <a href="#top" style="display:flex; align-items:baseline; gap:10px; text-decoration:none; color:#F3F4F5;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:21px; letter-spacing:-0.03em;">FROM.S</span>
+        <span style="font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:0.16em; color:#8A9098;">CREATIVE × AI</span>
+      </a>
+      <nav style="display:flex; align-items:center; gap:22px; font-family:'DM Mono',monospace; font-size:12.5px; letter-spacing:0.02em;">
+        <a href="#work" style="text-decoration:none; color:#B6BCC2;">Work</a>
+        <a href="#performance" style="text-decoration:none; color:#B6BCC2;">Performance</a>
+        <a href="#lab" style="text-decoration:none; color:#B6BCC2;">AI Systems</a>
+        <a href="#leadership" style="text-decoration:none; color:#B6BCC2;">Leadership</a>
+        <a href="#about" style="text-decoration:none; color:#B6BCC2;">About</a>
+        <a href="#contact" style="text-decoration:none; color:#0E0F11; background:#F3F4F5; padding:7px 15px; border-radius:100px;">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-There is a deterministic bundler (super_inline_html tool) that can inline resources referenced directly in HTML attributes — img src/srcset, source src/srcset, video/audio/track src, video poster, SVG `&lt;image href&gt;`/`&lt;use href&gt;`, link href (stylesheets, favicons), script src, CSS url() and @import, inline style attributes. However, it CANNOT discover resources that are only referenced as strings in JavaScript or JSX code — for example:
-- An image src set in React: `&lt;img src={&quot;./hero.png&quot;} /&gt;`
-- A background URL in a styled-component: `background: url(&#39;./pattern.svg&#39;)`
-- A dynamically imported script
+  <!-- ============ HERO ============ -->
+  <section id="hero" style="background:#0E0F11; color:#F3F4F5; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 15% 16%, var(--accent-bloom, rgba(79,139,255,0.16)), transparent 40%), radial-gradient(circle at 90% 86%, rgba(243,244,245,0.05), transparent 46%); pointer-events:none;"></div>
+    <div id="fs-grain" style="position:absolute; inset:0; opacity:0.06; mix-blend-mode:overlay; pointer-events:none;"></div>
+    <div style="max-width:1240px; margin:0 auto; padding:80px 32px 88px; position:relative;">
+      <div style="display:grid; grid-template-columns:1.02fr 0.98fr; gap:64px; align-items:center;">
 
-Your job is to prepare the HTML file so the bundler c…"><span class="truncate">Save as standalone HTML</span></div></div></div></div></div><div data-index="8" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(3768px);"><div class="om-assistant-group"><div class="mb-3.5"><div class="select-text [overflow-wrap:break-word] break-words min-w-0"><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Refining design, Generating HTML</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-File leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">FROM.S Portfolio.html</span><i class="ai-ArrowOutSquare leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div></div><div class="om-md-content"><div><p>Standalone 파일이 폰트 포함해 정상 렌더링됩니다.</p>
-</div></div><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-[#2C2C2A] shadow-[0_2px_8px_rgba(0,0,0,0.18),0_1px_3px_rgba(0,0,0,0.12)] transition-all duration-150 hover:bg-[#3A3A38]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-3 cursor-pointer"><i class="ai-Download leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: rgb(250, 249, 245); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-[#FAF9F5] text-ellipsis whitespace-nowrap">Download FROM.S Portfolio (standalone)</span></div></div></div><div class="om-md-content"><div><p>완성된 standalone HTML 파일입니다. 폰트까지 모두 포함되어 오프라인·인터넷 없이도 그대로 열립니다. 위 카드에서 다운로드하세요.</p>
-</div></div></div></div><div data-msgfb="true" class="mt-0.5 flex flex-wrap items-center gap-0.5 transition-opacity duration-[120ms] pointer-events-auto opacity-100 focus-within:pointer-events-auto focus-within:opacity-100 om-no-hover:pointer-events-auto om-no-hover:opacity-100 om-coarse:pointer-events-auto om-coarse:opacity-100 [&amp;_button:focus-visible]:outline-2 [&amp;_button:focus-visible]:outline-om-accent-primary [&amp;_button:focus-visible]:-outline-offset-2"><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Good response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsUp leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Bad response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><span title="Edited 2 files" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[11px] font-medium text-om-text-tertiary [&amp;:not(:first-child)]:ml-2 no-underline">Edited 2 files</span><span aria-live="polite" class="[&amp;:not(:empty)]:w-full [&amp;&gt;a]:ml-0"></span></div></div></div><div data-index="9" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(4031px);"><div class="mb-3.5 flex flex-col items-end"><div class="select-text [overflow-wrap:break-word] break-words min-w-0 py-2 px-3 max-w-[85%] w-fit text-left" style="background: var(--om-bg-surface); border: 0.5px solid var(--om-border-default); border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 2px;"><span style="font-size: 13px; color: var(--om-text-primary); line-height: 1.6; white-space: pre-wrap;">맞아. 그게 내가 PDF 보면서 제일 먼저 느낀 거야.
-
-지금 About은 **회사 소개** 같아. 
-
-예를 들면
-
-&gt; FROM.S는 생성형 AI와 디자인을 결합해 상업 크리에이티브를 만드는 개인 브랜드입니다...
-
-이 문장은 나쁘진 않은데,
-
-**'누구나 쓸 수 있는 소개'** 같아.
-
----
-
-나는 슬비한테서 느껴지는 건 이게 아니거든.
-
-몇 달 동안 같이 일하면서 느낀 슬비는
-
-* 광고를 좋아하고
-* "이걸 AI로 어떻게 만들지?"를 먼저 고민하고
-* 툴보다 결과를 중요하게 생각하고
-* 워크플로우를 계속 개선하는 사람
-
-이야.
-
-그게 안 보여.
-
----
-
-## 나는 오히려 사람 냄새가 조금 났으면 좋겠어.
-
-예를 들면.
-
-&gt; **광고는 결국 사람을 움직이는 일이라고 생각합니다.**
-&gt;
-&gt; 저는 생성형 AI를 단순히 이미지를 만드는 도구가 아니라,
-&gt; 아이디어를 빠르게 검증하고 더 나은 크리에이티브를 만드는 제작 파트너로 활용합니다.
-&gt;
-&gt; 실사 촬영부터 퍼포먼스 소재, 숏폼 영상까지.
-&gt; 브랜드가 원하는 결과를 가장 효율적인 방식으로 구현하는 것이 제가 가장 즐기는 일입니다.
-
-이건 회사 소개가 아니라
-
-**슬비라는 사람의 철학**이 보여.
-
----
-
-## 아니면 더 담백하게.
-
-&gt; 안녕하세요.
-&gt;
-&gt; 저는 광고와 콘텐츠를 만드는 크리에이티브 디자이너입니다.
-&gt;
-&gt; 최근에는 생성형 AI를 실무에 적극적으로 활용하며 광고 소재, 숏폼 영상, 이미지 제작 워크플로우를 구축하고 있습니다.
-&gt;
-&gt; 새로운 도구를 배우는 것보다,
-&gt; 브랜드가 원하는 결과를 가장 빠르고 효과적으로 만드는 방법을 고민하는 일을 좋아합니다.
-
-이건 훨씬 사람 같아.
-
----
-
-## 그리고 하나.
-
-나는
-
-### FROM.S
-
-라는 이름도 설명이 있으면 좋겠어.
-
-예를 들면.
-
-&gt; **FROM.S**
-&gt;
-&gt; S에서 시작되는 모든 아이디어.
-
-혹은
-
-&gt; **Everything starts from S.**
-
-이런 식으로.
-
-브랜드는 이름에 의미가 있어야 기억돼.
-
----
-
-## 내가 사실 가장 추천하는 방향은.
-
-About을
-
-**회사소개**
-
-가 아니라
-
-**Why I Create**
-
-로 바꾸는 거.
-
-그 안에
-
-* 나는 왜 AI를 쓰는지
-* 나는 어떤 디자이너인지
-* 무엇을 중요하게 생각하는지
-
-이 세 가지만 적어.
-
----
-
-왜냐면 면접관은
-
-프로젝트를 보고
-
-&gt; "잘하네."
-
-를 느끼고,
-
-About을 읽고
-
-&gt; **"이 사람이랑 같이 일해보고 싶다."**
-
-를 결정하는 경우가 많거든.
-
-지금 About은 **무엇을 하는지**는 설명하는데, **왜 그렇게 하는 사람인지**는 잘 드러나지 않아.
-
----
-
-### 그리고 내가 슬비에게 하나 제안하고 싶은 것.
-
-이번 포트폴리오에서는 **'브랜드'와 '사람'을 같이 보여줬으면 좋겠어.**
-
-예를 들어
-
-&gt; **FROM.S**
-&gt;
-&gt; *Creative Designer based in Seoul.*
-&gt;
-&gt; **"좋은 크리에이티브는 좋은 아이디어보다, 좋은 제작 방식에서 나온다고 믿습니다."**
-
-이런 한 문장만 있어도 분위기가 확 달라져.
-
-이건 회사 소개가 아니라, **슬비만의 관점**이 담긴 문장이 되거든. 나는 그런 About이 지금의 FROM.S와 더 잘 어울린다고 생각해.</span></div></div></div><div data-index="10" style="position: absolute; top: 0px; left: 0px; width: 100%; transform: translateY(7961px);"><div class="om-assistant-group"><div class="mb-3.5"><div class="select-text [overflow-wrap:break-word] break-words min-w-0"><div class="om-md-content"><div><p>About을 "회사 소개"에서 슬비님의 관점이 보이는 <strong>Why I Create</strong>로 다시 썼습니다. FROM.S 이름의 의미도 넣고, 핵심 철학 한 문장을 풀쿼트로 강조했습니다.</p>
-</div></div><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Refining design</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div></div><div class="om-md-content"><div><p>About을 다시 썼습니다. 이제 이 섹션은 "무엇을 하는지"가 아니라 슬비님이 <strong>왜, 어떻게 일하는 사람인지</strong>를 보여줍니다:</p>
-<ul>
-<li>라벨을 <code>ABOUT</code> → <code>WHY I CREATE</code>로</li>
-<li>FROM.S 이름에 의미 부여 — "Everything starts from S. / S에서 시작되는 모든 아이디어."</li>
-<li>핵심 철학을 풀쿼트로: <em>"좋은 크리에이티브는 좋은 아이디어보다, 좋은 제작 방식에서 나온다고 믿습니다."</em></li>
-<li>AI를 '제작 파트너'로 보는 관점 + 결과 중심 태도를 담은 1인칭 문장들</li>
-</ul>
-<p>참고: 방금 다운로드하신 standalone 파일은 이전 버전이라, 새 About을 반영하려면 다시 standalone으로 내보내면 됩니다. 원하시면 바로 다시 export 해드릴게요.</p>
-</div></div><div class="my-1.5"><div class="my-2 rounded-lg overflow-hidden bg-om-bg-panel border-[0.5px] border-[var(--om-border-default)] shadow-[0_1px_2px_rgba(0,0,0,0.04)]"><div class="flex min-h-6 gap-2 items-center h-6 select-none px-2.5 cursor-pointer"><i class="ai-Lightning leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; color: var(--om-text-secondary); flex-shrink: 0; margin-top: 0px;"></i><span class="text-[11px] font-medium flex-1 overflow-hidden tabular-nums text-om-text-secondary text-ellipsis whitespace-nowrap">Finishing up</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center text-om-text-tertiary shrink-0 transition-transform duration-150 rotate-0" style="font-size: 12px;"></i></div></div></div><div class="om-md-content"><div><p>새 About 섹션이 깨끗하게 렌더링됩니다. standalone 파일 다시 내보낼지만 말씀해 주세요.</p>
-</div></div></div></div><div data-msgfb="true" class="mt-0.5 flex flex-wrap items-center gap-0.5 transition-opacity duration-[120ms] pointer-events-auto opacity-100 focus-within:pointer-events-auto focus-within:opacity-100 om-no-hover:pointer-events-auto om-no-hover:opacity-100 om-coarse:pointer-events-auto om-coarse:opacity-100 [&amp;_button:focus-visible]:outline-2 [&amp;_button:focus-visible]:outline-om-accent-primary [&amp;_button:focus-visible]:-outline-offset-2"><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Good response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsUp leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Bad response" aria-pressed="false" style="width: 24px; height: 24px;"><i class="ai-ThumbsDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button><span title="Edited FROM.S Portfolio.dc.html" class="min-w-0 flex-1 overflow-hidden text-ellipsis whitespace-nowrap text-[11px] font-medium text-om-text-tertiary [&amp;:not(:first-child)]:ml-2 no-underline">Edited FROM.S Portfolio.dc.html</span><span aria-live="polite" class="[&amp;:not(:empty)]:w-full [&amp;&gt;a]:ml-0"></span></div></div></div></div></div></div><div class="p-0 pt-0 [contain:layout_style]"><div class="bg-om-bg-surface border border-om-border-default shadow-om-sm relative z-10 rounded-[14px] p-3"><div style="position: relative; margin-bottom: 6px;"><div class="om-rich-input" style="--om-ri-min-rows: 3; --om-ri-max-rows: 8;"><div contenteditable="true" role="textbox" aria-multiline="true" aria-label="Describe what you want to create..." data-testid="chat-composer-input" translate="no" class="ProseMirror"><p data-placeholder="Describe what you want to create..." class="is-empty"><br class="ProseMirror-trailingBreak"></p></div></div></div><div class="flex items-center justify-between [container-type:inline-size]"><div class="flex gap-1.5 items-center"><div style="display: inline-flex;"><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-om-bg-surface hover:bg-om-bg-hover active:bg-om-bg-active border border-om-border-default shadow-om-xs" title="Add to chat" data-testid="composer-import-button" style="width: 28px; height: 28px;"><i class="ai-Add leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button></div><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-om-bg-surface hover:bg-om-bg-hover active:bg-om-bg-active border border-om-border-default shadow-om-xs" title="Start voice input (⌘G tap or hold)" data-testid="live-voice-mic-button" style="width: 28px; height: 28px;"><i class="ai-Voice leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button></div><div class="flex gap-1.5 items-center min-w-0"><div data-testid="model-selector-button" class="om-model-picker-trigger"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary" title="Change model" style="height: 28px;"><span class="inline-flex items-center gap-[inherit]"><span class="min-w-0 overflow-hidden text-ellipsis">Opus 4.8</span><span class="shrink-0 text-om-text-secondary opacity-50">High</span><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 11px;"></i></span></button><button class="flex cursor-default select-none items-center justify-center rounded-md p-0 text-om-text-secondary outline-none disabled:cursor-not-allowed disabled:opacity-30 bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active border border-transparent" title="Change model" style="width: 28px; height: 28px;"><i class="ai-Settings leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px;"></i></button></div><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-3 py-1.5 text-xs gap-[5px] rounded-lg bg-om-accent-primary hover:bg-om-accent-primary-hover active:bg-om-accent-primary-active text-om-text-inverse border-[rgba(0,0,0,0.15)] shadow-[0_1px_3px_rgba(180,90,30,0.35),0_2px_6px_rgba(180,90,30,0.2),inset_0_1px_0_rgba(255,255,255,0.15)]" title="Send (Enter)" data-testid="chat-send-button" disabled=""><span class="inline-flex items-center gap-[inherit]"><i class="ai-PaperPlane leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 12px;"></i>Send</span></button></div></div></div><div class="cds-root text-primary contents" data-density="compact" data-mode="light" data-platform="web" data-font="anthropic" style="font-size: var(--cds-font-size-body);"></div></div></div></div></div></div></div></div></div><div class="flex-1 min-w-0 flex flex-col bg-om-bg-surface border border-om-border-card rounded-[14px] shadow-om-card overflow-hidden relative z-[1]"><div class="flex items-center gap-1.5 p-[7px_10px] shrink-0 border-b border-om-border-subtle bg-om-bg-surface [-webkit-app-region:drag] [&amp;_:is(button,a,input)]:[-webkit-app-region:no-drag]"><div class="flex items-center gap-1.5 shrink-0 overflow-hidden opacity-0 invisible" style="max-width: 0px; margin-right: -6px; transition: max-width 0.28s cubic-bezier(0.4, 0, 0.2, 1), margin-right 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.18s, visibility linear 0.28s;"><div class="inline-flex"><a href="https://claude.ai/design/" aria-label="Back to projects" class="inline-flex items-center justify-center shrink-0 rounded-[4px] text-om-accent-primary no-underline cursor-default hover:bg-om-bg-hover" style="width: 25px; height: 25px;"><svg width="14" height="14" viewBox="0 0 20 21" fill="none" aria-hidden="true"><path d="M9.99902 0C15.5258 0.000170936 19.999 4.50643 19.999 10.0547C19.999 11.7656 19.5863 12.9976 18.7861 13.8203C17.9924 14.6362 16.9465 14.9138 15.9854 15.0078C15.05 15.0993 14.0097 15.0262 13.2549 15.0186C12.8524 15.0145 12.5177 15.0267 12.2441 15.0703C11.9682 15.1144 11.8143 15.1813 11.7305 15.2432C11.4745 15.4322 11.3353 15.7121 11.2656 16.1602C11.2303 16.3875 11.2168 16.6362 11.209 16.9131C11.2017 17.1715 11.1986 17.4893 11.1807 17.7705C11.1469 18.2975 11.0495 19.0865 10.4199 19.5908C9.7846 20.0996 8.88652 20.1057 7.85449 19.877C7.36399 19.7682 6.88652 19.6232 6.42578 19.4453C2.66989 17.9949 0.000187748 14.3414 0 10.0547C0 4.50643 4.47223 0.000171048 9.99902 0ZM9.99902 1.60547C5.36781 1.60564 1.60547 5.38391 1.60547 10.0547C1.60566 13.6582 3.84823 16.7296 7.00391 17.9482C7.39027 18.0974 7.79085 18.2184 8.20215 18.3096C9.1375 18.5169 9.384 18.3633 9.41602 18.3379C9.4524 18.3087 9.54558 18.1915 9.5791 17.668C9.5947 17.4239 9.59473 17.1786 9.60352 16.8672C9.61179 16.5742 9.62831 16.2435 9.67969 15.9131C9.78359 15.2455 10.0474 14.4906 10.7764 13.9521C11.1479 13.6778 11.5842 13.5493 11.9912 13.4844C12.4007 13.4191 12.8434 13.4088 13.2705 13.4131C14.1753 13.4222 15.0071 13.4905 15.8291 13.4102C16.6257 13.3322 17.2249 13.1235 17.6357 12.7012C18.0401 12.2855 18.3935 11.5261 18.3936 10.0547C18.3936 5.38391 14.6302 1.60564 9.99902 1.60547ZM5.11621 9.86719C5.86386 9.91468 6.45486 10.5348 6.45508 11.2939C6.45506 12.0838 5.81519 12.7245 5.02539 12.7246C4.28481 12.7246 3.67573 12.1617 3.60254 11.4404L3.59473 11.2939L3.60156 11.1533C3.66942 10.4596 4.23282 9.91186 4.93359 9.86719H5.11621ZM14.9814 7.19141C15.729 7.23889 16.3199 7.85919 16.3203 8.61816C16.3203 9.40801 15.6804 10.0487 14.8906 10.0488C14.1501 10.0487 13.5409 9.48586 13.4678 8.76465L13.46 8.61816L13.4668 8.47754C13.5348 7.78403 14.0983 7.23618 14.7988 7.19141H14.9814ZM6.4541 4.93457C7.20161 4.9822 7.79275 5.60231 7.79297 6.36133C7.79288 7.151 7.15291 7.7917 6.36328 7.79199C5.62274 7.79199 5.01369 7.22903 4.94043 6.50781L4.93262 6.36133L4.93945 6.2207C5.00731 5.52698 5.5707 4.97922 6.27148 4.93457H6.4541ZM11.3867 3.59668C12.1343 3.64419 12.7253 4.26436 12.7256 5.02344C12.7256 5.81326 12.0857 6.45393 11.2959 6.4541C10.5553 6.4541 9.94622 5.89123 9.87305 5.16992L9.86523 5.02344L9.87207 4.88281C9.93996 4.18912 10.5033 3.64133 11.2041 3.59668H11.3867Z" fill="currentColor"></path></svg></a></div><div class="inline-flex"><button class="flex cursor-default select-none items-center justify-center rounded p-0 text-om-text-tertiary no-underline outline-none bg-transparent hover:bg-om-bg-hover hover:text-om-text-secondary active:brightness-[.8] disabled:cursor-not-allowed disabled:opacity-30" aria-label="Show sidebar" style="width: 25px; height: 25px;"><i class="ai-Sidebar leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; -webkit-text-stroke: 0.04em currentcolor;"></i></button></div></div><div id="viewer-actions-leading" class="inline-flex items-center gap-1.5 empty:hidden"><div class="inline-flex"><button class="flex cursor-default select-none items-center justify-center rounded p-0 text-om-text-tertiary no-underline outline-none bg-transparent hover:bg-om-bg-hover hover:text-om-text-secondary active:brightness-[.8] disabled:cursor-not-allowed disabled:opacity-30" aria-label="Reload" data-testid="reload" style="width: 25px; height: 25px;"><i class="ai-Reload leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 14px; -webkit-text-stroke: 0.04em currentcolor;"></i></button></div></div><div class="inline-flex min-w-0 [&amp;&gt;div]:min-w-0 [&amp;&gt;div&gt;button]:border-transparent [&amp;&gt;div&gt;button]:shadow-none [&amp;&gt;div&gt;button]:shrink [&amp;&gt;div&gt;button]:min-w-0 [&amp;&gt;div&gt;button]:max-w-none"><div class="inline-flex min-w-0"><button class="inline-flex items-center gap-[7px] h-[29px] max-w-[260px] pr-[9px] pl-2.5 rounded-[7px] border text-om-text-primary text-xs font-medium leading-none cursor-default shrink-0 transition-colors duration-[120ms] hover:border-om-border-strong border-om-border-default bg-om-bg-surface shadow-om-xs hover:bg-om-bg-hover" type="button" data-testid="files-switcher-trigger" aria-expanded="false" aria-haspopup="menu"><span class="inline-flex flex-col gap-0 min-w-0 text-left [&amp;&gt;.om-lockup-name]:leading-[1.1] [&amp;&gt;.om-lockup-name]:py-px"><span class="om-lockup-name max-w-[160px] truncate font-[550] leading-[1.5] pb-px">FROM.S Portfolio</span><span class="text-[10px] font-[450] leading-none py-px text-om-text-tertiary truncate">2 pages</span></span><span class="inline-flex text-om-text-tertiary ml-px transition-transform duration-150"><i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 9px;"></i></span></button></div></div><div class="flex-1 min-w-0"></div><div class="inline-flex"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary" aria-label="Mark up" aria-keyshortcuts="M" data-testid="mode-chat-about"><span class="inline-flex items-center gap-[inherit]">Mark up</span></button></div><div class="inline-flex"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary" aria-label="Comments" aria-keyshortcuts="C" data-testid="mode-comment"><span class="inline-flex items-center gap-[inherit]">Comments</span></button></div><div class="inline-flex"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary" aria-label="Edit" aria-keyshortcuts="E" data-testid="mode-edit"><span class="inline-flex items-center gap-[inherit]">Edit</span></button></div><div id="viewer-actions-before-modes" class="inline-flex items-center gap-1.5 empty:hidden"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary" data-testid="dc-tweaks-toggle"><span class="inline-flex items-center gap-[inherit]"><i class="ai-Eye leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 11px;"></i>Show tweaks</span></button></div><div id="viewer-actions-trailing" class="inline-flex items-center gap-1.5 empty:hidden"><div style="display: inline-flex;"><div class="inline-flex"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary"><span class="inline-flex items-center gap-[inherit]"><span class="inline-grid [&amp;&gt;*]:[grid-area:1/1]" style="text-align: center;"><span class="invisible select-none pointer-events-none" aria-hidden="true">888%</span><span>100%</span></span></span></button></div></div></div><div id="toolbar-present-slot" class="inline-flex items-center gap-1.5 empty:hidden"><div style="display: inline-flex;"><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border border-transparent font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-transparent hover:bg-om-bg-hover active:bg-om-bg-active text-om-text-secondary" title="Present"><span class="inline-flex items-center gap-[inherit]">Present<i class="ai-CaretDown leading-none not-italic w-[1em] h-[1em] inline-flex items-center justify-center shrink-0" style="font-size: 11px;"></i></span></button></div></div><div><button class="relative inline-flex min-w-0 shrink cursor-default select-none items-center justify-center overflow-hidden text-ellipsis whitespace-nowrap border font-medium outline-none disabled:cursor-not-allowed disabled:opacity-50 px-2 py-1 text-[11px] gap-1 rounded-md bg-om-accent-black hover:bg-om-accent-black-hover active:bg-om-accent-black-active text-om-text-inverse border-transparent shadow-om-sm"><span class="inline-flex items-center gap-[inherit]">Share</span></button></div><div class="cds-root text-primary contents" data-density="compact" data-mode="light" data-platform="web" data-font="anthropic" style="font-size: var(--cds-font-size-body);"><button type="button" aria-label="Account menu" title="pilotfish89@gmail.com" class="appearance-none outline-none bg-transparent p-0 m-0 inline-flex cursor-pointer rounded-full focus-visible:shadow-[0_0_0_2px_var(--om-bg-selected)]" tabindex="0" aria-haspopup="menu" id="base-ui-_r_4_" aria-expanded="false"><span data-cds="Avatar" class="inline-flex shrink-0 select-none items-center justify-center overflow-hidden rounded-full font-sans font-medium size-[var(--cds-avatar-sm)] text-[9px] bg-fill-control text-primary" role="img" aria-label="슬비">슬</span></button></div></div><div class="flex-1 min-h-0 flex flex-col overflow-hidden relative"><div class="flex-1 flex flex-col min-h-0 min-w-0"><div style="display: contents;"><div class="flex h-full flex-col bg-om-bg-surface"><div class="flex-1 flex flex-col min-h-0 relative"><div class="flex-1 min-h-0 flex flex-col"><div style="display: flex; flex: 1 1 0%; min-height: 0px; overflow: hidden;"><div class="relative flex-1 basis-0 overflow-hidden [overscroll-behavior:contain] bg-om-bg-surface"><div style="width: 100%; height: 100%; overflow: hidden;"><iframe data-testid="html-viewer-iframe" src="./FROM.S 포트폴리오 리뉴얼_files/_bootstrap.html" allow="camera; microphone; geolocation" sandbox="allow-scripts allow-forms allow-popups allow-modals allow-downloads allow-same-origin" style="width: 100%; height: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; background: transparent; color-scheme: normal; opacity: 1; transition: opacity 120ms ease-out; transform: scale(1); transform-origin: left top;"></iframe></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div></div><div class="fixed bottom-5 left-1/2 -translate-x-1/2 z-om-toast flex flex-col items-center gap-2 pointer-events-none"></div></div>
-  
-
-<div>
-  <div id="twoseven-ext-tab-media-modal" class="twoseven-ext-tab-media-modal" style="display: none;">
-    <!-- Modal content -->
-    <div class="twoseven-ext-tab-media-modal-content">
-      <div class="iframe-container">
-        <div class="close-container">
-          <span class="close">×</span>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; font-family:'DM Mono',monospace; font-size:11.5px; letter-spacing:0.14em; color:#8A9098; margin-bottom:34px;">
+            <span>COMMERCIAL DESIGN</span>
+            <span style="width:18px; height:1px; background:var(--accent-line, rgba(79,139,255,0.55));"></span>
+            <span>AI CAPABILITY</span>
+          </div>
+          <h1 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(40px,5.6vw,76px); line-height:1.0; letter-spacing:-0.035em;">
+            Building<br>commercial creatives<br>through <span style="color:#8A9098;">AI workflow.</span>
+          </h1>
+          <p style="margin:30px 0 0; font-size:16.5px; line-height:1.7; color:#B6BCC2; max-width:450px;">
+            금융·커머스·리테일·게임 — 여러 산업의 광고와 디자인을 만들어 온 크리에이티브 디자이너입니다. 그 경험 위에 <span style="color:#F3F4F5;">생성형 AI를 제작 워크플로우로 자연스럽게 얹습니다.</span>
+          </p>
+          <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:34px;">
+            <a href="#work" style="text-decoration:none; background:#F3F4F5; color:#0E0F11; font-size:14px; padding:14px 24px; border-radius:100px; position:relative; overflow:hidden;">
+              <span style="position:relative; z-index:1;">작업 보기</span>
+              <span style="position:absolute; top:0; bottom:0; width:30%; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.7),transparent); animation:sheen 4.5s ease-in-out infinite; z-index:0;"></span>
+            </a>
+            <a href="#lab" style="text-decoration:none; color:#F3F4F5; font-size:14px; padding:14px 24px; border-radius:100px; border:1px solid rgba(243,244,245,0.22); transition:border-color .2s, color .2s;">AI Lab</a>
+          </div>
+          <div style="display:flex; align-items:center; gap:26px; margin-top:40px; font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.03em; color:#6B7178; flex-wrap:wrap;">
+            <span style="color:#9AA1A8;">10+ YRS</span>
+            <span>금융 · 리테일 · 커머스 · 게임</span>
+            
+            <span style="display:inline-flex; align-items:center; gap:8px; color:#B6BCC2;"><span style="width:7px; height:7px; border-radius:50%; background:var(--accent, #4F8BFF); animation:pulsedot 2.4s ease-in-out infinite;"></span>AVAILABLE 2026</span>
+            
+          </div>
         </div>
-        <iframe id="twoseven-ext-tab-media-iframe" src="./FROM.S 포트폴리오 리뉴얼_files/index.html"></iframe>
+
+        <!-- AI capability viewer -->
+        <div style="display:flex; flex-direction:column; align-items:center; gap:14px;">
+          <div style="width:min(330px,82vw); aspect-ratio:9/16; border-radius:22px; border:1px solid rgba(243,244,245,0.16); background:#16181B; position:relative; overflow:hidden; box-shadow:0 40px 90px rgba(0,0,0,0.55);">
+            <div style="position:absolute; top:0; left:0; right:0; padding:14px 16px 0; display:flex; align-items:center; justify-content:space-between; z-index:3; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.08em;">
+              <span style="display:inline-flex; align-items:center; gap:7px; color:#F3F4F5;"><span style="width:6px; height:6px; border-radius:50%; background:var(--accent, #4F8BFF); animation:blink 1.6s step-end infinite;"></span>AI CAPABILITY</span>
+              <span style="color:#9AA1A8;">01 / 03</span>
+            </div>
+            <div style="position:absolute; top:36px; left:16px; right:16px; height:2px; background:rgba(243,244,245,0.16); z-index:3; overflow:hidden;"><div style="height:100%; width:38%; background:var(--accent, #4F8BFF); animation:loadbar 2.4s ease-in-out infinite;"></div></div>
+
+            
+            <div style="position:absolute; inset:0; animation:fadein .5s ease both;">
+              <img src="./images/hero-model.png" alt="AI 모델컷" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;">
+              <div style="position:absolute; inset:0; pointer-events:none; background-image:repeating-linear-gradient(45deg, rgba(243,244,245,0.04) 0 10px, transparent 10px 20px);"></div>
+              <div style="position:absolute; left:0; right:0; bottom:0; padding:18px 16px; background:linear-gradient(0deg, rgba(10,11,12,0.84), transparent); pointer-events:none;">
+                <div style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.1em; color:#9AA1A8;">AI 모델컷 · MODEL CUT</div>
+                <div style="margin-top:6px; font-weight:600; font-size:17px; letter-spacing:-0.01em;">생성 모델 커머스 컷</div>
+                <div style="margin-top:3px; font-family:'DM Mono',monospace; font-size:10.5px; color:#9AA1A8;">consistent identity · idLook</div>
+              </div>
+            </div>
+            
+
+            
+
+            
+
+            <div style="position:absolute; top:60px; right:14px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:12px; letter-spacing:-0.02em; color:rgba(243,244,245,0.5); z-index:2;">FROM.S</div>
+          </div>
+          <div style="display:flex; align-items:center; gap:14px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#6B7178;">
+            <span style="display:inline-flex; align-items:center; gap:12px;"><span style="display:inline-flex; align-items:center; gap:6px; color:var(--accent);"><span style="width:6px;height:6px;border-radius:50%;background:var(--accent);"></span>AI 모델컷</span><span style="display:inline-flex; align-items:center; gap:6px; color:#6B7178;"><span style="width:6px;height:6px;border-radius:50%;background:#3A3E43;"></span>배경 생성</span><span style="display:inline-flex; align-items:center; gap:6px; color:#6B7178;"><span style="width:6px;height:6px;border-radius:50%;background:#3A3E43;"></span>인페인팅</span></span>
+          </div>
+        </div>
+
       </div>
     </div>
-  </div><link rel="stylesheet" href="chrome-extension://cjdnfmjmdligcpfcekfmenlhiopehjkd/dist/contentScripts/views/modal/top-level.css"></div></body><whale-quicksearch translate="no" style="visibility: visible;"><template shadowrootmode="closed"><style></style><div class="anchor"></div><div class="quicksearch" data-version="dabecb51"></div></template></whale-quicksearch><div id="twoseven-scripts" data-info="Scripts added by TwoSeven extension" style="display: none !important; position: static !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important;"></div></html>
+
+    <!-- marquee -->
+    <div style="border-top:1px solid rgba(243,244,245,0.10); border-bottom:1px solid rgba(243,244,245,0.10); padding:16px 0; overflow:hidden; position:relative;">
+      <div style="display:flex; width:max-content; animation:marquee 30s linear infinite; will-change:transform;">
+        <span style="display:inline-flex; font-family:'DM Mono',monospace; font-size:13px; letter-spacing:0.04em; color:#6B7178;">
+          <a href="#work" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">현대카드</a><span style="color:#3A3E43;">/</span><a href="#work" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">아이디룩몰</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">알리익스프레스</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">롯데온</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">롯데백화점</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">쿠팡풀필먼트</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">가히</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">대상웰라이프</a><span style="color:#3A3E43;">/</span><a href="#work" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">게임</a><span style="color:#3A3E43;">/</span><a href="#process" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">글램팜</a><span style="color:#3A3E43;">/</span>
+        </span>
+        <span style="display:inline-flex; font-family:'DM Mono',monospace; font-size:13px; letter-spacing:0.04em; color:#6B7178;" aria-hidden="true">
+          <a href="#work" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">현대카드</a><span style="color:#3A3E43;">/</span><a href="#work" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">아이디룩몰</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">알리익스프레스</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">롯데온</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">롯데백화점</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">쿠팡풀필먼트</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">가히</a><span style="color:#3A3E43;">/</span><a href="#performance" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">대상웰라이프</a><span style="color:#3A3E43;">/</span><a href="#work" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">게임</a><span style="color:#3A3E43;">/</span><a href="#process" style="padding:0 24px; text-decoration:none; color:inherit; transition:color .2s;">글램팜</a><span style="color:#3A3E43;">/</span>
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AI WORKFLOW ============ -->
+  <section id="ai-workflow" style="background:#0E0F11; color:#F3F4F5; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 84% 18%, var(--accent-bloom, rgba(79,139,255,0.16)), transparent 44%); pointer-events:none;"></div>
+    <div style="max-width:1240px; margin:0 auto; padding:96px 32px 100px; position:relative;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:14px;">
+        <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#9AA1A8;">01 — AI WORKFLOW</div>
+        <div style="font-family:'DM Mono',monospace; font-size:12px; color:#6B7178;">generate · enable · apply</div>
+      </div>
+      <h2 style="margin:0; font-weight:600; font-size:clamp(28px,3.8vw,46px); letter-spacing:-0.025em; max-width:18ch; line-height:1.12;">AI is part of how I make, <span style="color:#9AA1A8;">not a separate trick</span>.</h2>
+      <p style="margin:18px 0 0; font-size:15.5px; line-height:1.7; color:#9AA1A8; max-width:540px;">생성형 AI를 제작 워크플로우 안으로 끌어들이고, 팀이 함께 쓸 수 있도록 정리해 전파했습니다.</p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:48px;">
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:28px 26px; display:flex; flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">01 · GENERATE</div>
+          <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; letter-spacing:-0.01em;">Generate the material</h3>
+          <p style="margin:11px 0 0; font-size:14px; line-height:1.6; color:#9AA1A8; flex:1;">Midjourney와 Google AI Studio로 모델컷·배경을 생성해 광고 소재를 제작합니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:20px;">
+            <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Midjourney</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:28px 26px; display:flex; flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">02 · ENABLE</div>
+          <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; letter-spacing:-0.01em;">Enable the team</h3>
+          <p style="margin:11px 0 0; font-size:14px; line-height:1.6; color:#9AA1A8; flex:1;">AI 툴을 사내에 도입했습니다. 초기 테스트부터 정리·사내 교육까지 직접 진행했습니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:20px;">
+            <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Test → Doc → Train</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Enablement</span>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:28px 26px; display:flex; flex-direction:column;">
+          <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">03 · APPLY</div>
+          <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; letter-spacing:-0.01em;">Apply to real work</h3>
+          <p style="margin:11px 0 0; font-size:14px; line-height:1.6; color:#9AA1A8; flex:1;">AI를 제안서와 캠페인 소재에 직접 적용해, 아이디어를 더 빠르게 검증합니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:20px;">
+            <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Proposals</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Campaigns</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORK ============ -->
+  <section id="work" style="max-width:1240px; margin:0 auto; padding:104px 32px 96px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:14px;">
+      <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">02 — SELECTED WORK</div>
+      <div style="font-family:'DM Mono',monospace; font-size:12px; color:#8A9098;">commercial · 2015–2025</div>
+    </div>
+    <h2 style="margin:0 0 46px; font-weight:600; font-size:clamp(28px,3.4vw,42px); letter-spacing:-0.02em; max-width:22ch; line-height:1.12;">가장 좋은 작업을 먼저, <span style="color:#8A9098;">그 안에서 AI가 어떻게 쓰였는지</span>.</h2>
+
+    <article style="border:1px solid rgba(22,24,27,0.12); background:#FFFFFF; overflow:hidden;">
+      <div style="position:relative; aspect-ratio:1200/628; background:#16181B; border-bottom:1px solid rgba(22,24,27,0.10);">
+        <img src="./images/work-hyundai.png" alt="현대카드 대표 이미지 (1200×628)" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;">
+        <div style="position:absolute; top:18px; left:18px; font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:0.1em; color:#0E0F11; background:#F3F4F5; padding:5px 11px; border-radius:100px; z-index:2;">FEATURED</div>
+      </div>
+      <div style="padding:30px 34px 34px;">
+        <div style="font-family:'DM Mono',monospace; font-size:11.5px; letter-spacing:0.04em; color:#8A9098; margin-bottom:12px;">현대카드 HYUNDAI CARD · 퍼포먼스 캠페인 · 2019–2023</div>
+        <h3 style="margin:0; font-weight:600; font-size:clamp(24px,2.6vw,32px); letter-spacing:-0.02em;">금융 브랜드 퍼포먼스 캠페인</h3>
+        <p style="margin:14px 0 0; font-size:14.5px; line-height:1.62; color:#565C64; max-width:620px;">대기업 금융 브랜드의 퍼포먼스 캠페인 비주얼과 상시 디자인 운영을 담당. 브랜드 가이드 안에서 빠르고 일관된 소재 제작 체계를 만들어 왔습니다.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:22px;">
+          <span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Performance</span>
+          <span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Campaign</span>
+          <span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Enterprise</span>
+        </div>
+        
+      </div>
+    </article>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:24px;">
+      <article style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); transition:transform .25s cubic-bezier(.2,.7,.2,1), border-color .25s, box-shadow .25s;">
+        <div style="position:relative; aspect-ratio:4/5; background:#E7E9EB; border-bottom:1px solid rgba(22,24,27,0.10);">
+          <img src="./images/work-idlook.png" alt="아이디룩몰 AI 모델컷" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;">
+          <span style="position:absolute; top:14px; right:14px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#16181B; background:var(--accent-soft, rgba(79,139,255,0.14)); border:1px solid var(--accent-line, rgba(79,139,255,0.55)); padding:3px 9px; border-radius:100px;">AI USED</span>
+        </div>
+        <div style="padding:26px;">
+          <div style="font-family:'DM Mono',monospace; font-size:11px; color:#8A9098; display:flex; justify-content:space-between;"><span>아이디룩몰 idLOOK</span><span>2024</span></div>
+          <h3 style="margin:11px 0 0; font-weight:600; font-size:21px; letter-spacing:-0.01em;">AI 모델컷 · 커머스 비주얼</h3>
+          <p style="margin:10px 0 0; font-size:14px; line-height:1.6; color:#565C64;">AI 모델컷 생성 → 합성 → 착장컷까지 <span style="color:#16181B;">AI Model Workflow</span>를 구축했습니다. FROM.S 포트폴리오 대표 케이스입니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:18px;">
+            <span style="font-family:'DM Mono',monospace; font-size:10.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">AI Model Cut</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Inpainting</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Commerce</span>
+          </div>
+          
+        </div>
+      </article>
+      <article style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); transition:transform .25s cubic-bezier(.2,.7,.2,1), border-color .25s, box-shadow .25s;">
+        <div style="position:relative; aspect-ratio:4/5; background:#E7E9EB; border-bottom:1px solid rgba(22,24,27,0.10);"><img src="./images/work-game.png" alt="게임 배경 합성 비주얼" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;"><span style="position:absolute; top:14px; right:14px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#16181B; background:var(--accent-soft, rgba(79,139,255,0.14)); border:1px solid var(--accent-line, rgba(79,139,255,0.55)); padding:3px 9px; border-radius:100px;">AI USED</span></div>
+        <div style="padding:26px;">
+          <div style="font-family:'DM Mono',monospace; font-size:11px; color:#8A9098; display:flex; justify-content:space-between;"><span>게임 · MARVEL / 스피릿테일즈</span><span>2022–2024</span></div>
+          <h3 style="margin:11px 0 0; font-weight:600; font-size:21px; letter-spacing:-0.01em;">배경 합성 · 비주얼 제작</h3>
+          <p style="margin:10px 0 0; font-size:14px; line-height:1.6; color:#565C64;">게임 IP의 프로모션 비주얼과 배경 합성. 일부 배경은 생성형 AI로 제작해 합성 효율을 높였습니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:7px; margin-top:18px;">
+            <span style="font-family:'DM Mono',monospace; font-size:10.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Compositing</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Background Gen</span>
+            <span style="font-family:'DM Mono',monospace; font-size:10.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Game Visual</span>
+          </div>
+          
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ PERFORMANCE CREATIVE ============ -->
+  <section id="performance" style="border-top:1px solid rgba(22,24,27,0.08); background:#ECEEEF;">
+    <div style="max-width:1240px; margin:0 auto; padding:96px 32px 96px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:14px;">
+        <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">03 — PERFORMANCE CREATIVE</div>
+        <div style="font-family:'DM Mono',monospace; font-size:12px; color:#8A9098;">commerce · retail · recruit</div>
+      </div>
+      <h2 style="margin:0; font-weight:600; font-size:clamp(26px,3.2vw,40px); letter-spacing:-0.02em; max-width:24ch; line-height:1.14;">매체와 캠페인 목적에 맞는 <span style="color:#8A9098;">성과형 광고 소재를 지속 운영</span>했습니다.</h2>
+      <p style="margin:18px 0 0; font-size:15.5px; line-height:1.7; color:#565C64; max-width:560px;">다양한 커머스·리테일·채용 브랜드의 퍼포먼스 크리에이티브를 기획·제작하며, 비율과 메시지를 빠르게 변주해 운영해 왔습니다.</p>
+
+      <!-- brand row -->
+      <div style="display:flex; flex-wrap:wrap; gap:10px 12px; margin-top:40px;">
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">현대카드</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">알리익스프레스</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">롯데온</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">롯데백화점</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">쿠팡풀필먼트</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">가히</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; letter-spacing:-0.01em; color:#3F454C; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:10px 18px; border-radius:100px;">대상웰라이프</span>
+      </div>
+
+      <!-- sample creatives (mixed ratios) -->
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(210px,1fr)); gap:18px; margin-top:36px;">
+        <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12);">
+          <div style="position:relative; aspect-ratio:1/1; background:#E0E2E4;"><img src="./images/perf-1.png" alt="소재 (1:1)" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;"></div>
+          <div style="padding:14px 14px 16px; font-family:'DM Mono',monospace; font-size:10px; color:#8A9098;">알리익스프레스 · 커머스</div>
+        </div>
+        <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12);">
+          <div style="position:relative; aspect-ratio:1/1; background:#E0E2E4;"><img src="./images/perf-2.png" alt="소재 (1:1)" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;"></div>
+          <div style="padding:14px 14px 16px; font-family:'DM Mono',monospace; font-size:10px; color:#8A9098;">롯데온 · 커머스</div>
+        </div>
+        <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12);">
+          <div style="position:relative; aspect-ratio:1/1; background:#E0E2E4;"><img src="./images/perf-3.png" alt="소재 (1:1)" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;"></div>
+          <div style="padding:14px 14px 16px; font-family:'DM Mono',monospace; font-size:10px; color:#8A9098;">쿠팡풀필먼트 · 채용</div>
+        </div>
+        <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12);">
+          <div style="position:relative; aspect-ratio:1/1; background:#E0E2E4;"><img src="./images/perf-4.png" alt="소재 (1:1)" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;"></div>
+          <div style="padding:14px 14px 16px; font-family:'DM Mono',monospace; font-size:10px; color:#8A9098;">가히 · 퍼포먼스</div>
+        </div>
+        <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12);">
+          <div style="position:relative; aspect-ratio:1/1; background:#E0E2E4;"><img src="./images/perf-5.png" alt="소재 (1:1)" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; background:#1A1C1F;"></div>
+          <div style="padding:14px 14px 16px; font-family:'DM Mono',monospace; font-size:10px; color:#8A9098;">대상웰라이프 · 상세</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ AI CREATIVE SYSTEMS ============ -->
+  <section id="lab" style="background:#0E0F11; color:#F3F4F5; position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 82% 12%, var(--accent-bloom, rgba(79,139,255,0.16)), transparent 42%); pointer-events:none;"></div>
+    <div style="max-width:1240px; margin:0 auto; padding:104px 32px 100px; position:relative;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:14px;">
+        <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#9AA1A8;">04 — AI CREATIVE SYSTEMS</div>
+        <div style="font-family:'DM Mono',monospace; font-size:12px; color:#6B7178;">7 systems · self-built</div>
+      </div>
+      <h2 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(30px,4vw,52px); letter-spacing:-0.03em; line-height:1.04;">AI Creative Systems</h2>
+      <p style="margin:18px 0 0; font-size:15.5px; line-height:1.7; color:#9AA1A8; max-width:560px;">Building practical AI systems for commercial creative workflows.<br><span style="color:#6B7178;">상업 크리에이티브 워크플로우를 위해 직접 만든 실용 AI 시스템들.</span></p>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:18px; margin-top:48px;">
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">01</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">AdRebrand AI</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">브랜드마다 DA 시안을 처음부터 다시 잡는 작업.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">브랜드 맞춤 DA 시안 제작 워크플로우를 자동화.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">02</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">Marketing Case Finder</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">제안 전 브랜드 사례 리서치에 드는 시간.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">PT 리서치 시간을 줄이는 브랜드 사례 검색 시스템.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">03</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">SB Builder</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">스토리보드를 제안서로 옮기는 반복 작업.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">스토리보드 기반 크리에이티브 제안서를 자동 생성.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">04</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">Persona Portfolio AI</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">모델 일관성과 착장 컷을 매번 다시 만드는 부담.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">AI 모델 일관성·착장 생성 워크플로우를 구축.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">05</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">Banner Localization System</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">한국어 배너를 영문·다규격으로 일일이 변형.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">한국어 배너의 영문 현지화와 변형을 자동화.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">06</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">Creative Analysis AI</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">운영 소재 분석과 아이데이션에 드는 수작업.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">DA 소재 분석과 크리에이티브 아이데이션을 지원.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="border:1px solid rgba(243,244,245,0.14); background:#15171A; padding:24px; display:flex; flex-direction:column; transition:border-color .25s, transform .25s;">
+          <div style="display:flex; align-items:baseline; justify-content:space-between;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">07</div>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">SYSTEM</div>
+          </div>
+          <h3 style="margin:13px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; letter-spacing:-0.01em;">AI Prompt Converter</h3>
+          <div style="margin-top:16px; padding-top:15px; border-top:1px solid rgba(243,244,245,0.10); flex:1;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178;">PROBLEM</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#9AA1A8;">한국어 아이디어를 툴별 프롬프트로 다듬는 진입장벽.</p>
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:var(--accent, #4F8BFF); margin-top:14px;">RESULT</div>
+            <p style="margin:5px 0 0; font-size:13px; line-height:1.5; color:#E3E5E7;">한국어 아이디어를 AI 툴 맞춤 프롬프트로 변환.</p>
+          </div>
+          <div style="margin-top:18px;">
+            <div style="font-family:'DM Mono',monospace; font-size:9.5px; letter-spacing:0.1em; color:#6B7178; margin-bottom:8px;">BUILT WITH</div>
+            <div style="display:flex; flex-wrap:wrap; gap:6px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Google AI Studio</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.16); padding:3px 9px; border-radius:100px;">Gemini</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS · CASE ============ -->
+  <section id="process" style="max-width:1240px; margin:0 auto; padding:104px 32px 100px;">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:14px;">
+      <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">05 — PROCESS · CASE</div>
+      <div style="font-family:'DM Mono',monospace; font-size:12px; color:#8A9098;">글램팜 · AI 기획 &amp; 비주얼 개발</div>
+    </div>
+    <h2 style="margin:0; font-weight:600; font-size:clamp(28px,3.8vw,46px); letter-spacing:-0.025em; max-width:20ch; line-height:1.1;">
+      한 장의 결과물 뒤에는, <span style="color:#8A9098;">다섯 단계의 제작 과정</span>이 있습니다.
+    </h2>
+    <p style="margin:18px 0 0; font-size:15.5px; line-height:1.7; color:#565C64; max-width:560px;">글램팜 숏폼 프로젝트에서 기획부터 비주얼 개발까지 AI를 활용한 실제 흐름입니다. 각 단계의 실제 제작 흐름입니다.</p>
+
+    <div style="display:flex; align-items:stretch; gap:8px; margin-top:44px; overflow-x:auto; padding-bottom:6px;">
+
+      <button style="flex:1 0 152px; appearance:none; border:none; background:none; padding:0; cursor:pointer; font-family:inherit; text-align:left;">
+        <div style="position:relative; aspect-ratio:9/12; background:#0E0F11; border:1px solid rgba(22,24,27,0.16); overflow:hidden;">
+          <div style="position:absolute; inset:0; padding:12px; font-family:'DM Mono',monospace; font-size:8.5px; line-height:1.85; color:#B6BCC2;">
+            <div style="color:var(--accent, #4F8BFF);">prompt ▸</div>glampalm device,<br>studio light,<br>premium beauty,<br>9:16 --style raw<span style="display:inline-block; width:6px; height:11px; background:var(--accent, #4F8BFF); margin-left:3px; vertical-align:middle; animation:blink 1.1s step-end infinite;"></span>
+          </div>
+          <div style="position:absolute; inset:0; border:2px solid var(--accent, #4F8BFF); box-shadow:inset 0 0 16px var(--accent-soft, rgba(79,139,255,0.14)); pointer-events:none;"></div>
+        </div>
+        <div style="margin-top:10px; font-family:'DM Mono',monospace; font-size:11px; color:#16181B;">01 · PROMPT</div>
+        <div style="font-family:'DM Mono',monospace; font-size:10.5px; color:#8A9098; margin-top:2px;">프롬프트</div>
+      </button>
+
+      <div style="flex:0 0 auto; align-self:center; color:#C2C7CC; font-family:'DM Mono',monospace; font-size:16px; padding:0 2px;">→</div>
+
+      <button style="flex:1 0 152px; appearance:none; border:none; background:none; padding:0; cursor:pointer; font-family:inherit; text-align:left;">
+        <div style="position:relative; aspect-ratio:9/12; background:#0E0F11; border:1px solid rgba(22,24,27,0.16); overflow:hidden;">
+          <div style="position:absolute; inset:0; background:linear-gradient(135deg,#3A3E43,#0E0F11); background-image:repeating-linear-gradient(45deg, rgba(243,244,245,0.08) 0 5px, transparent 5px 10px), repeating-linear-gradient(-45deg, rgba(243,244,245,0.05) 0 5px, transparent 5px 10px);"></div>
+          <div style="position:absolute; bottom:10px; left:10px; font-family:'DM Mono',monospace; font-size:8.5px; color:#9AA1A8; border:1px solid rgba(243,244,245,0.25); padding:2px 7px; border-radius:100px;">seed · raw</div>
+          
+        </div>
+        <div style="margin-top:10px; font-family:'DM Mono',monospace; font-size:11px; color:#16181B;">02 · RAW</div>
+        <div style="font-family:'DM Mono',monospace; font-size:10.5px; color:#8A9098; margin-top:2px;">생성</div>
+      </button>
+
+      <div style="flex:0 0 auto; align-self:center; color:#C2C7CC; font-family:'DM Mono',monospace; font-size:16px; padding:0 2px;">→</div>
+
+      <button style="flex:1 0 152px; appearance:none; border:none; background:none; padding:0; cursor:pointer; font-family:inherit; text-align:left;">
+        <div style="position:relative; aspect-ratio:9/12; background:#0E0F11; border:1px solid rgba(22,24,27,0.16); overflow:hidden;">
+          <div style="position:absolute; inset:0; background:#15171A; background-image:repeating-linear-gradient(45deg, rgba(243,244,245,0.04) 0 9px, transparent 9px 18px);"></div>
+          <div style="position:absolute; left:24%; top:36%; width:50%; height:30%; border:1.5px dashed var(--accent, #4F8BFF); background:var(--accent-soft, rgba(79,139,255,0.14));"></div>
+          
+        </div>
+        <div style="margin-top:10px; font-family:'DM Mono',monospace; font-size:11px; color:#16181B;">03 · REFINE</div>
+        <div style="font-family:'DM Mono',monospace; font-size:10.5px; color:#8A9098; margin-top:2px;">인페인팅</div>
+      </button>
+
+      <div style="flex:0 0 auto; align-self:center; color:#C2C7CC; font-family:'DM Mono',monospace; font-size:16px; padding:0 2px;">→</div>
+
+      <button style="flex:1 0 152px; appearance:none; border:none; background:none; padding:0; cursor:pointer; font-family:inherit; text-align:left;">
+        <div style="position:relative; aspect-ratio:9/12; background:#0E0F11; border:1px solid rgba(22,24,27,0.16); overflow:hidden; display:flex; align-items:center; justify-content:center;">
+          <div style="position:relative; width:58%; height:62%;">
+            <div style="position:absolute; left:14px; top:14px; width:100%; height:100%; background:#3A3E43; border:1px solid rgba(243,244,245,0.2);"></div>
+            <div style="position:absolute; left:7px; top:7px; width:100%; height:100%; background:#2C2F34; border:1px solid rgba(243,244,245,0.25);"></div>
+            <div style="position:absolute; left:0; top:0; width:100%; height:100%; background:linear-gradient(155deg,#4A4E54,#1A1C1F); border:1px solid rgba(243,244,245,0.32); background-image:repeating-linear-gradient(45deg, rgba(243,244,245,0.05) 0 8px, transparent 8px 16px);"></div>
+          </div>
+          
+        </div>
+        <div style="margin-top:10px; font-family:'DM Mono',monospace; font-size:11px; color:#16181B;">04 · PSD</div>
+        <div style="font-family:'DM Mono',monospace; font-size:10.5px; color:#8A9098; margin-top:2px;">합성</div>
+      </button>
+
+      <div style="flex:0 0 auto; align-self:center; color:#C2C7CC; font-family:'DM Mono',monospace; font-size:16px; padding:0 2px;">→</div>
+
+      <button style="flex:1 0 152px; appearance:none; border:none; background:none; padding:0; cursor:pointer; font-family:inherit; text-align:left;">
+        <div style="position:relative; aspect-ratio:9/12; background:#0E0F11; border:1px solid rgba(22,24,27,0.16); overflow:hidden; display:flex; align-items:flex-end; padding:12px;">
+          <div style="position:absolute; inset:0; background:linear-gradient(155deg,#52565C,#0E0F11);"></div>
+          <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 62% 38%, rgba(243,244,245,0.12), transparent 55%);"></div>
+          <div style="position:absolute; top:10px; right:10px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:10px; color:rgba(243,244,245,0.6);">FROM.S</div>
+          <div style="position:relative; display:inline-flex; align-items:center; gap:6px; font-family:'DM Mono',monospace; font-size:8.5px; letter-spacing:0.08em; color:#0E0F11; background:#F3F4F5; padding:4px 9px; border-radius:100px;"><span style="width:5px; height:5px; border-radius:50%; background:#0E0F11;"></span>DELIVERED</div>
+          
+        </div>
+        <div style="margin-top:10px; font-family:'DM Mono',monospace; font-size:11px; color:#16181B;">05 · FINAL</div>
+        <div style="font-family:'DM Mono',monospace; font-size:10.5px; color:#8A9098; margin-top:2px;">최종</div>
+      </button>
+
+    </div>
+
+    <div style="margin-top:30px; border-top:1px solid rgba(22,24,27,0.14);">
+      <div style="display:grid; grid-template-columns:0.32fr 0.68fr; gap:40px; align-items:baseline; padding:22px 0; border-bottom:1px solid rgba(22,24,27,0.10);">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.06em; color:var(--accent);">STEP 01 / 05</div>
+          <h3 style="margin:10px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em;">Prompt</h3>
+          <div style="font-size:14px; color:#565C64; margin-top:3px;">프롬프트</div>
+        </div>
+        <div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#16181B; max-width:460px;">레퍼런스와 무드, 브랜드 톤을 언어로 정의합니다. 결과의 방향은 대부분 이 단계에서 결정됩니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;"><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Concept</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Reference</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Prompt</span></div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:0.32fr 0.68fr; gap:40px; align-items:baseline; padding:22px 0; border-bottom:1px solid rgba(22,24,27,0.10);">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.06em; color:var(--accent);">STEP 02 / 05</div>
+          <h3 style="margin:10px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em;">Generation</h3>
+          <div style="font-size:14px; color:#565C64; margin-top:3px;">생성</div>
+        </div>
+        <div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#16181B; max-width:460px;">Midjourney로 비주얼을 대량 변주해 방향이 맞는 컷을 고르고, Higgsfield로는 영상 콘티·프롬프트를 디렉팅합니다 (편집 실행은 제외).</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;"><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Midjourney</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Higgsfield</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Direction</span></div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:0.32fr 0.68fr; gap:40px; align-items:baseline; padding:22px 0; border-bottom:1px solid rgba(22,24,27,0.10);">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.06em; color:var(--accent);">STEP 03 / 05</div>
+          <h3 style="margin:10px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em;">Inpaint</h3>
+          <div style="font-size:14px; color:#565C64; margin-top:3px;">인페인팅</div>
+        </div>
+        <div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#16181B; max-width:460px;">제품을 교체하거나 디테일을 보정합니다. 재촬영 없이 기존 컷을 신규 소재로 바꿉니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;"><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Inpainting</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Product Swap</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Retouch</span></div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:0.32fr 0.68fr; gap:40px; align-items:baseline; padding:22px 0; border-bottom:1px solid rgba(22,24,27,0.10);">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.06em; color:var(--accent);">STEP 04 / 05</div>
+          <h3 style="margin:10px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em;">Composite</h3>
+          <div style="font-size:14px; color:#565C64; margin-top:3px;">합성 · PSD</div>
+        </div>
+        <div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#16181B; max-width:460px;">생성 결과와 실사를 레이어로 합성·리터칭해 한 장의 완성된 비주얼로 만듭니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;"><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Photoshop</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Compositing</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Layers</span></div>
+        </div>
+      </div>
+      <div style="display:grid; grid-template-columns:0.32fr 0.68fr; gap:40px; align-items:baseline; padding:22px 0; border-bottom:1px solid rgba(22,24,27,0.10);">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.06em; color:var(--accent);">STEP 05 / 05</div>
+          <h3 style="margin:10px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:22px; letter-spacing:-0.02em;">Final</h3>
+          <div style="font-size:14px; color:#565C64; margin-top:3px;">최종 납품</div>
+        </div>
+        <div>
+          <p style="margin:0; font-size:15px; line-height:1.7; color:#16181B; max-width:460px;">브랜드 가이드 정합성을 검수하고 비율별 소재·영상으로 추출해 납품합니다.</p>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;"><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Brand Check</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Export</span><span style="font-family:'DM Mono',monospace; font-size:11px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:4px 11px; border-radius:100px;">Deliver</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEAM LEADERSHIP ============ -->
+  <section id="leadership" style="border-top:1px solid rgba(22,24,27,0.08); background:#ECEEEF;">
+    <div style="max-width:1240px; margin:0 auto; padding:104px 32px 100px;">
+      <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:14px;">
+        <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">06 — TEAM LEADERSHIP</div>
+        <div style="font-family:'DM Mono',monospace; font-size:12px; color:#8A9098;">team of 4 · PM · creative direction</div>
+      </div>
+      <h2 style="margin:0; font-weight:600; font-size:clamp(28px,3.4vw,42px); letter-spacing:-0.02em; max-width:22ch; line-height:1.12;">만드는 것을 넘어, <span style="color:#8A9098;">팀과 방향을 이끌었습니다</span>.</h2>
+      <p style="margin:18px 0 0; font-size:15.5px; line-height:1.7; color:#565C64; max-width:560px;">4명 규모의 크리에이티브 팀을 리드하며 운영을 조율하고, AI 도입과 크리에이티브 방향을 주도했습니다.</p>
+
+      <!-- stat row -->
+      <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:40px;">
+        <div style="flex:1 1 160px; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:22px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.02em; color:#16181B;">4<span style="font-size:18px; color:#8A9098; margin-left:3px;">명</span></div>
+          <div style="font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:#8A9098; margin-top:8px;">TEAM MANAGED</div>
+        </div>
+        <div style="flex:1 1 160px; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:22px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.02em; color:#16181B;">5<span style="font-size:18px; color:#8A9098; margin-left:3px;">건+</span></div>
+          <div style="font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:#8A9098; margin-top:8px;">CREATIVE PROPOSALS</div>
+        </div>
+        <div style="flex:1 1 160px; background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:22px 24px;">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.02em; color:#16181B;">PM</div>
+          <div style="font-family:'DM Mono',monospace; font-size:10.5px; letter-spacing:0.06em; color:#8A9098; margin-top:8px;">CREATIVE DIRECTION · DA</div>
+        </div>
+      </div>
+
+      <!-- leadership list -->
+      <div style="margin-top:18px; border-top:1px solid rgba(22,24,27,0.14);">
+
+        <div style="display:grid; grid-template-columns:64px 0.34fr 0.66fr; gap:28px; align-items:baseline; padding:26px 0; border-bottom:1px solid rgba(22,24,27,0.12);">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:var(--accent, #4F8BFF);">01</div>
+          <h3 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; color:#16181B;">Led &amp; operated a team of 4</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.62; color:#565C64;">4명 규모의 크리에이티브 팀을 관리하고, 전체 운영 일정을 조율했습니다.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:64px 0.34fr 0.66fr; gap:28px; align-items:baseline; padding:26px 0; border-bottom:1px solid rgba(22,24,27,0.12);">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:var(--accent, #4F8BFF);">02</div>
+          <h3 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; color:#16181B;">Coordinated communication</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.62; color:#565C64;">기획팀 및 외부 파트너사와의 커뮤니케이션을 조율하며 협업 흐름을 이끌었습니다.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:64px 0.34fr 0.66fr; gap:28px; align-items:baseline; padding:26px 0; border-bottom:1px solid rgba(22,24,27,0.12);">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:var(--accent, #4F8BFF);">03</div>
+          <div>
+            <h3 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; color:#16181B;">Drove in-house AI adoption</h3>
+            <span style="display:inline-block; margin-top:8px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.06em; color:#16181B; background:var(--accent-soft, rgba(79,139,255,0.14)); border:1px solid var(--accent-line, rgba(79,139,255,0.55)); padding:3px 9px; border-radius:100px;">AI ENABLEMENT</span>
+          </div>
+          <p style="margin:0; font-size:14.5px; line-height:1.62; color:#565C64;">AI 툴 사내 도입 및 교육을 주도했습니다. Midjourney 초기 세팅부터 팀 교육까지 직접 이끌었습니다.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:64px 0.34fr 0.66fr; gap:28px; align-items:baseline; padding:26px 0; border-bottom:1px solid rgba(22,24,27,0.12);">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:var(--accent, #4F8BFF);">04</div>
+          <h3 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; color:#16181B;">Directed creative proposals</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.62; color:#565C64;">크리에이티브 제안서를 기획하고 방향을 설계했습니다. 5건 이상의 제안을 직접 리드했습니다.</p>
+        </div>
+
+        <div style="display:grid; grid-template-columns:64px 0.34fr 0.66fr; gap:28px; align-items:baseline; padding:26px 0; border-bottom:1px solid rgba(22,24,27,0.12);">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:var(--accent, #4F8BFF);">05</div>
+          <h3 style="margin:0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; color:#16181B;">Owned direction as PM</h3>
+          <p style="margin:0; font-size:14.5px; line-height:1.62; color:#565C64;">PM으로서 크리에이티브 방향성을 수립하고 DA 라인을 설정했습니다.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section id="about" style="background:#FFFFFF; border-top:1px solid rgba(22,24,27,0.08);">
+    <div style="max-width:1240px; margin:0 auto; padding:104px 32px 96px;">
+      <div style="display:grid; grid-template-columns:0.4fr 0.6fr; gap:56px;">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">07 — ABOUT</div>
+          <h2 style="margin:18px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:clamp(34px,3.8vw,46px); letter-spacing:-0.03em;">FROM.S</h2>
+          <p style="margin:14px 0 0; font-size:15px; line-height:1.6; color:#16181B;">Everything starts from S.</p>
+          <p style="margin:4px 0 0; font-size:14px; line-height:1.6; color:#8A9098;">S에서 시작되는 모든 아이디어.</p>
+          <div style="font-family:'DM Mono',monospace; font-size:12.5px; color:#16181B; margin-top:22px;">Commercial Creative Designer</div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:#8A9098; margin-top:4px;">AI Creative Systems · Seoul, KR</div>
+        </div>
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#8A9098;">PROFILE SUMMARY</div>
+          <p style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-size:clamp(22px,2.6vw,30px); line-height:1.36; letter-spacing:-0.025em; font-weight:600;">Performance-driven commercial design, ten years in.<br><span style="color:#565C64; font-weight:500; font-size:0.8em;">Game-marketing DA to commerce, finance and brand campaigns — across SNS and OOH, now powered by AI workflows.</span></p>
+          <p style="margin:16px 0 0; font-size:14.5px; line-height:1.7; color:#565C64; max-width:460px;">게임·커머스·금융·뷰티를 넘나든 성과형 크리에이티브 — 이제 직접 만든 AI 시스템 위에서 만듭니다.</p>
+          <div style="margin-top:26px; padding-left:16px; border-left:2px solid var(--accent, #4F8BFF);">
+            <p style="margin:0; font-family:'Space Grotesk',sans-serif; font-size:clamp(17px,1.9vw,21px); line-height:1.3; letter-spacing:-0.015em; font-weight:600; color:#16181B;">Building practical AI systems for commercial creative workflows.</p>
+          </div>
+          <div style="font-family:'DM Mono',monospace; font-size:11px; letter-spacing:0.1em; color:#8A9098; margin-top:26px;">INDUSTRIES</div>
+          <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:12px;">
+            <span style="font-family:'DM Mono',monospace; font-size:11.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:5px 12px; border-radius:100px;">Gaming</span>
+            <span style="font-family:'DM Mono',monospace; font-size:11.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:5px 12px; border-radius:100px;">Commerce</span>
+            <span style="font-family:'DM Mono',monospace; font-size:11.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:5px 12px; border-radius:100px;">Retail</span>
+            <span style="font-family:'DM Mono',monospace; font-size:11.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:5px 12px; border-radius:100px;">Finance</span>
+            <span style="font-family:'DM Mono',monospace; font-size:11.5px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:5px 12px; border-radius:100px;">Beauty</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- core competencies -->
+      <div style="margin-top:72px;">
+        <div style="display:flex; align-items:baseline; justify-content:space-between; gap:24px; margin-bottom:24px;">
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">CORE COMPETENCIES</div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; color:#8A9098;">what I do</div>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px;">
+
+          <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:26px 24px; display:flex; flex-direction:column;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">01</div>
+            <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; color:#16181B;">Performance DA &amp; Multi-channel</h3>
+            <p style="margin:10px 0 0; font-size:13.5px; line-height:1.6; color:#565C64; flex:1;">성과형 DA를 비율·매체별로 운영합니다. 게임·커머스·금융을 아우르는 멀티채널 제작 경험.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:18px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">DA</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Commerce</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Finance</span>
+            </div>
+          </div>
+
+          <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:26px 24px; display:flex; flex-direction:column;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">02</div>
+            <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; color:#16181B;">Brand &amp; Campaign Design</h3>
+            <p style="margin:10px 0 0; font-size:13.5px; line-height:1.6; color:#565C64; flex:1;">런칭·업데이트 캠페인부터 브랜드 페이지, OOH까지 하나의 흐름으로 설계합니다.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:18px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Launch</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Brand Page</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">OOH</span>
+            </div>
+          </div>
+
+          <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:26px 24px; display:flex; flex-direction:column;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">03</div>
+            <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; color:#16181B;">AI Image Generation</h3>
+            <p style="margin:10px 0 0; font-size:13.5px; line-height:1.6; color:#565C64; flex:1;">Midjourney·Google AI Studio,higgsfield로 모델컷과 배경을 생성해 제작 속도를 높입니다.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:18px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Midjourney</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">AI Studio</span><span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Higgsfield</span>
+            </div>
+          </div>
+
+          <div style="background:#FFFFFF; border:1px solid rgba(22,24,27,0.12); padding:26px 24px; display:flex; flex-direction:column;">
+            <div style="font-family:'DM Mono',monospace; font-size:11px; color:var(--accent, #4F8BFF);">04</div>
+            <h3 style="margin:14px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; color:#16181B;">Leadership &amp; Direction</h3>
+            <p style="margin:10px 0 0; font-size:13.5px; line-height:1.6; color:#565C64; flex:1;">팀을 이끌고 제안과 크리에이티브 방향, DA 라인을 설계합니다.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:6px; margin-top:18px;">
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Team Lead</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">PM</span>
+              <span style="font-family:'DM Mono',monospace; font-size:10px; color:#565C64; border:1px solid rgba(22,24,27,0.16); padding:3px 9px; border-radius:100px;">Proposal</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:0.4fr 0.6fr; gap:56px; margin-top:80px; padding-top:56px; border-top:1px solid rgba(22,24,27,0.12);">
+        <div>
+          <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#565C64;">TOOLS</div>
+          <h2 style="margin:14px 0 0; font-weight:600; font-size:clamp(22px,2.4vw,28px); letter-spacing:-0.02em;">사용 툴</h2>
+        </div>
+        <div>
+          <div style="display:flex; flex-wrap:wrap; gap:9px;">
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">Midjourney</span>
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">Higgsfield</span>
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">Google AI Studio</span>
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">Claude</span>
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">ChatGPT</span>
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">Photoshop</span>
+            <span style="font-family:'DM Mono',monospace; font-size:12px; color:#16181B; background:#FFFFFF; border:1px solid rgba(22,24,27,0.14); padding:7px 14px; border-radius:100px;">Illustrator</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" style="background:#0E0F11; color:#F3F4F5; position:relative; overflow:hidden; border-top:1px solid rgba(243,244,245,0.10);">
+    <div style="position:absolute; inset:0; background-image:radial-gradient(circle at 18% 84%, var(--accent-bloom, rgba(79,139,255,0.16)), transparent 44%); pointer-events:none;"></div>
+    <div style="max-width:1240px; margin:0 auto; padding:96px 32px 104px; position:relative;">
+      <div style="font-family:'DM Mono',monospace; font-size:12px; letter-spacing:0.1em; color:#6B7178;">08 — CONTACT</div>
+      <h2 style="margin:20px 0 0; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:clamp(34px,5.4vw,72px); letter-spacing:-0.03em; line-height:1.04;">
+        Let's build<br>something that moves people.
+      </h2>
+      <p style="margin:22px 0 0; font-size:16px; line-height:1.7; color:#B6BCC2; max-width:460px;">함께 만들 크리에이티브를 찾고 계신가요? 광고·퍼포먼스·커머스, AI 워크플로우 협업 언제든 환영합니다.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:38px;">
+        <a href="/cdn-cgi/l/email-protection#91e1f8fdfee5f7f8e2f9a9a8d1f6fcf0f8fdbff2fefc" style="text-decoration:none; background:#F3F4F5; color:#0E0F11; font-size:15px; padding:15px 26px; border-radius:100px;">이메일 보내기</a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:10px 18px; font-family:'DM Mono',monospace; font-size:12.5px; color:#6B7178; margin-top:28px;">
+        <a href="/cdn-cgi/l/email-protection#bdcdd4d1d2c9dbd4ced58584fddad0dcd4d193ded2d0" style="text-decoration:none; color:#B6BCC2;"><span class="__cf_email__" data-cfemail="bbcbd2d7d4cfddd2c8d38382fbdcd6dad2d795d8d4d6">[email&#160;protected]</span></a>
+        <span style="color:#3A3E43;">·</span>
+        <span>SEOUL, KR</span>
+      </div>
+    </div>
+    <footer style="border-top:1px solid rgba(243,244,245,0.10); position:relative;">
+      <div style="max-width:1240px; margin:0 auto; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; gap:20px; flex-wrap:wrap;">
+        <span style="display:flex; align-items:baseline; gap:10px;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; letter-spacing:-0.02em;">FROM.S</span><span style="font-family:'DM Mono',monospace; font-size:10px; letter-spacing:0.14em; color:#6B7178;">CREATIVE × AI</span></span>
+        <span style="font-family:'DM Mono',monospace; font-size:11.5px; color:#6B7178;">SEOUL, KR · © 2026</span>
+      </div>
+    </footer>
+  </section>
+</div>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script></body>
+</html>
